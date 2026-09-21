@@ -1,0 +1,3810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pollima 💖">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#06040b">
+<meta name="description" content="A breathtaking romantic birthday celebration dedicated solely to my one and only love, Pollima — September 25.">
+<title>Happy Birthday, My One & Only Pollima 💖 | Across Every Mile</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 88 C 20 68, 8 48, 22 34 C 33 23, 50 33, 50 45 C 50 33, 67 23, 78 34 C 92 48, 80 68, 50 88 Z' fill='%23d4af37'/></svg>">
+
+<!-- Premium Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     DEDICATED SOLELY TO MY ONE AND ONLY — POLLIMA
+     Royal Velvet · Warm Champagne · Rose Pearl · Starlight
+     ═══════════════════════════════════════════════════════════ */
+  :root {
+    --bg-dark:       #06040b;
+    --bg-card:       rgba(20, 14, 30, 0.78);
+    --gold:          #d4af37;
+    --gold-light:    #fae8a8;
+    --gold-2:        #eec977;
+    --gold-3:        #b8922e;
+    --gold-deep:     #7a5e1c;
+    --champagne:     #f8edcf;
+    --ivory:         #fcf9f2;
+    --blush:         #f2b8c6;
+    --rose:          #e06287;
+    --text-primary:  #faf6ee;
+    --text-muted:    #baa98c;
+    --serif:         'Cinzel', Didot, 'Playfair Display', Georgia, serif;
+    --editorial:     'Playfair Display', Georgia, serif;
+    --sans:          'Plus Jakarta Sans', -apple-system, sans-serif;
+    --script:        'Great Vibes', cursive;
+    --audio-bloom:   0;
+    --moon-parallax-x: 0px;
+    --moon-parallax-y: 0px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--sans);
+    background: radial-gradient(ellipse at 82% 14%, #1c1231 0%, #0d0819 40%, #05030a 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    cursor: default;
+  }
+  ::selection { background: var(--gold); color: #0a0712; }
+
+  /* ── Canvas Layer: Deep Real Sky Stars + Meteors + Fireworks (তারকাবাজি) ── */
+  #fxCanvas {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── Ambient Glowing Cosmic Orbs ──────────────────────────── */
+  .cosmic-orb {
+    position: fixed; border-radius: 50%;
+    filter: blur(140px); pointer-events: none; z-index: 0;
+    animation: orbPulse 22s ease-in-out infinite alternate;
+  }
+  .orb-1 { width: 540px; height: 540px; background: radial-gradient(circle, rgba(212,175,55,0.13), transparent 70%); top: -140px; right: -120px; }
+  .orb-2 { width: 480px; height: 480px; background: radial-gradient(circle, rgba(224,98,135,0.12), transparent 70%); bottom: -100px; left: -100px; animation-duration: 26s; animation-delay: -7s; }
+  .orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(184,146,46,0.09), transparent 70%); top: 45%; left: 28%; animation-duration: 20s; }
+  @keyframes orbPulse {
+    0%   { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-50px, 50px) scale(1.2); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     POLLIMA'S LUMINOUS MOON & RADIANT NIGHT SKY
+     "তুমিই আমার পূর্ণিমার চাঁদ — যে পুরো আকাশকে আলোকিত করে"
+     ═══════════════════════════════════════════════════════════ */
+  .celestial-sky-layer {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  /* Wide Atmospheric Light Flood — Illuminating the entire sky! */
+  .moon-sky-flood {
+    position: fixed;
+    top: -160px; right: -150px;
+    width: min(850px, 140vw);
+    height: min(850px, 140vw);
+    border-radius: 50%;
+    background: radial-gradient(circle at 55% 45%, 
+      rgba(255, 248, 220, 0.28) 0%, 
+      rgba(250, 232, 168, 0.20) 24%, 
+      rgba(224, 98, 135, 0.12) 48%, 
+      rgba(150, 110, 210, 0.08) 68%, 
+      transparent 85%);
+    filter: blur(65px);
+    pointer-events: none;
+    z-index: 1;
+    transform: translate3d(calc(var(--moon-parallax-x, 0px) * -0.7), calc(var(--moon-parallax-y, 0px) * -0.7), 0) scale(calc(1 + var(--audio-bloom, 0) * 0.1));
+    transition: transform 0.15s ease-out;
+    animation: skyFloodRadiance 12s ease-in-out infinite alternate;
+  }
+  @keyframes skyFloodRadiance {
+    0%   { opacity: 0.75; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.8; }
+  }
+
+  /* The Moon Container */
+  .moon-wrapper {
+    position: fixed;
+    top: calc(20px + env(safe-area-inset-top));
+    right: calc(26px + env(safe-area-inset-right));
+    width: clamp(90px, 16vw, 126px);
+    height: clamp(90px, 16vw, 126px);
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 3;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transform: translate3d(var(--moon-parallax-x, 0px), var(--moon-parallax-y, 0px), 0) scale(calc(1 + var(--audio-bloom, 0) * 0.05));
+    transition: transform 0.15s ease-out;
+    animation: moonLevitate 14s ease-in-out infinite alternate;
+  }
+  @keyframes moonLevitate {
+    0%   { rotate: 0deg; }
+    50%  { rotate: -1.5deg; }
+    100% { rotate: 1.2deg; }
+  }
+
+  /* Rotating Celestial Moon Beams */
+  .moon-light-rays {
+    position: absolute; inset: -95%;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(255, 248, 220, 0.22) 18deg,
+      transparent 40deg,
+      rgba(250, 232, 168, 0.25) 60deg,
+      transparent 85deg,
+      rgba(255, 230, 200, 0.18) 110deg,
+      transparent 140deg,
+      rgba(250, 232, 168, 0.22) 165deg,
+      transparent 200deg,
+      rgba(255, 248, 220, 0.20) 225deg,
+      transparent 255deg,
+      rgba(250, 232, 168, 0.24) 285deg,
+      transparent 315deg,
+      rgba(255, 235, 190, 0.16) 340deg,
+      transparent 360deg
+    );
+    filter: blur(10px);
+    pointer-events: none;
+    animation: spinMoonRays 55s linear infinite;
+  }
+  @keyframes spinMoonRays {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* Multi-Layer Ethereal Lunar Halos */
+  .moon-aura-outer {
+    position: absolute; inset: -55%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 245, 215, 0.38) 0%, rgba(250, 232, 168, 0.24) 40%, rgba(224, 98, 135, 0.14) 65%, transparent 80%);
+    pointer-events: none;
+    filter: blur(16px);
+    transform: scale(calc(1 + var(--audio-bloom, 0) * 0.22));
+    transition: transform 0.3s ease-out;
+    animation: moonHaloPulse 6.5s ease-in-out infinite alternate;
+  }
+  @keyframes moonHaloPulse {
+    0%   { transform: scale(0.92); opacity: 0.7; }
+    100% { transform: scale(1.22); opacity: 1; }
+  }
+
+  .moon-aura-inner {
+    position: absolute; inset: -20%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 245, 0.65) 0%, rgba(250, 232, 168, 0.35) 50%, transparent 75%);
+    pointer-events: none;
+    filter: blur(8px);
+    animation: moonCoronaPulse 4.2s ease-in-out infinite alternate;
+  }
+  @keyframes moonCoronaPulse {
+    0%   { transform: scale(0.95); opacity: 0.75; }
+    100% { transform: scale(1.12); opacity: 1; }
+  }
+
+  /* The Glowing Moon Disc */
+  .moon-body {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #140d1f;
+    box-shadow:
+      inset 0 0 16px rgba(255, 255, 255, 0.75),
+      inset 0 0 32px rgba(250, 232, 168, 0.5),
+      0 0 25px rgba(255, 252, 238, 0.95),
+      0 0 65px rgba(250, 232, 168, 0.75),
+      0 0 120px rgba(220, 190, 255, 0.55),
+      0 0 190px rgba(212, 175, 55, 0.38);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 0.4s ease;
+  }
+  .moon-wrapper:hover .moon-body,
+  .moon-wrapper:active .moon-body {
+    transform: scale(1.08);
+    box-shadow:
+      inset 0 0 24px rgba(255, 255, 255, 0.9),
+      inset 0 0 45px rgba(250, 232, 168, 0.7),
+      0 0 35px rgba(255, 255, 255, 1),
+      0 0 85px rgba(250, 232, 168, 0.95),
+      0 0 150px rgba(220, 190, 255, 0.7),
+      0 0 240px rgba(212, 175, 55, 0.55);
+  }
+
+  /* Pollima's Portrait inside Moon */
+  .moon-portrait {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border-radius: 50%;
+    display: block;
+    filter: brightness(1.06) contrast(1.03) saturate(1.06);
+    transition: transform 0.5s ease;
+  }
+  .moon-wrapper:hover .moon-portrait {
+    transform: scale(1.05);
+  }
+
+  /* 3D Spherical Lunar Lighting Overlay on Face */
+  .moon-spherical-overlay {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle at 35% 30%, 
+      rgba(255, 255, 255, 0.22) 0%, 
+      rgba(250, 232, 168, 0.12) 40%, 
+      rgba(15, 10, 25, 0.45) 80%, 
+      rgba(6, 4, 11, 0.82) 100%);
+    mix-blend-mode: hard-light;
+  }
+
+  /* Subtle Lunar Crater Rim Overlay for Moon Realism */
+  .moon-crater-overlay {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  /* Starlight Gleam over Moon */
+  .moon-gleam {
+    position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.35), transparent 45%);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    animation: moonGleamFloat 8s ease-in-out infinite alternate;
+  }
+  @keyframes moonGleamFloat {
+    0%   { transform: translate(-6%, -6%) scale(0.95); opacity: 0.6; }
+    100% { transform: translate(6%, 6%) scale(1.1); opacity: 1; }
+  }
+
+  /* Floating Poetic Tooltip Badge */
+  .moon-poetic-badge {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: rgba(14, 9, 22, 0.85);
+    border: 1px solid rgba(250, 232, 168, 0.55);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(250, 232, 168, 0.25);
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    animation: badgeFloat 3.8s ease-in-out infinite alternate;
+  }
+  @keyframes badgeFloat {
+    0%   { transform: translateX(-50%) translateY(0); }
+    100% { transform: translateX(-50%) translateY(4px); }
+  }
+  .moon-poetic-badge .badge-text {
+    font-family: var(--serif);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: var(--gold-light);
+    text-shadow: 0 0 8px rgba(250, 232, 168, 0.6);
+  }
+  .moon-poetic-badge .badge-star {
+    color: var(--gold);
+    font-size: 9px;
+    animation: starTwinkle 1.8s infinite alternate;
+  }
+  @keyframes starTwinkle { 0%{opacity:0.4;transform:scale(0.8);} 100%{opacity:1;transform:scale(1.2);} }
+
+  /* Drifting Translucent Night Clouds Across Moon */
+  .night-cloud {
+    position: fixed;
+    pointer-events: none;
+  }
+  .night-cloud-back {
+    top: calc(8px + env(safe-area-inset-top));
+    right: -80px;
+    width: 360px; height: 150px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(135, 105, 165, 0.2), rgba(90, 65, 120, 0.08) 50%, transparent 75%);
+    filter: blur(24px);
+    z-index: 1;
+    animation: cloudDriftBack 80s linear infinite;
+  }
+  .night-cloud-front {
+    top: calc(30px + env(safe-area-inset-top));
+    right: -50px;
+    width: 290px; height: 120px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(245, 235, 215, 0.18), rgba(160, 135, 190, 0.1) 45%, transparent 70%);
+    filter: blur(18px);
+    z-index: 4;
+    animation: cloudDriftFront 60s linear infinite;
+  }
+  @keyframes cloudDriftBack {
+    0%   { transform: translateX(90px); opacity: 0.45; }
+    50%  { transform: translateX(-140px); opacity: 0.8; }
+    100% { transform: translateX(90px); opacity: 0.45; }
+  }
+  @keyframes cloudDriftFront {
+    0%   { transform: translateX(110px); opacity: 0.35; }
+    50%  { transform: translateX(-100px); opacity: 0.7; }
+    100% { transform: translateX(110px); opacity: 0.35; }
+  }
+
+  /* Moon Tap Feedback Shockwave Ring */
+  .moon-tap-ripple {
+    position: absolute; inset: -25%;
+    border-radius: 50%;
+    border: 2px solid rgba(250, 232, 168, 0.85);
+    pointer-events: none;
+    animation: moonTapWave 0.95s cubic-bezier(0.2, 0.8, 0.25, 1) forwards;
+  }
+  @keyframes moonTapWave {
+    0%   { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(2.3); opacity: 0; }
+  }
+
+  /* ── Scroll Progress Bar ──────────────────────────────────── */
+  #progress {
+    position: fixed; top: 0; left: 0; height: 3.5px; width: 0;
+    background: linear-gradient(90deg, var(--gold-3), var(--gold-light), var(--blush), var(--gold));
+    box-shadow: 0 0 16px rgba(250,232,168,0.95);
+    z-index: 95;
+    transition: width 0.1s linear;
+  }
+
+  /* ── Floating Cursor Trail & Live Heart Particles ────────── */
+  .trail-spark {
+    position: fixed; z-index: 75; pointer-events: none;
+    color: var(--gold-light);
+    text-shadow: 0 0 12px rgba(250,232,168,0.95);
+    transform: translate(-50%, -50%);
+    animation: trailPop 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  @keyframes trailPop {
+    0%   { opacity: 1; transform: translate(-50%, -50%) scale(0.6) rotate(0deg); }
+    100% { opacity: 0; transform: translate(-50%, -180%) scale(1.4) rotate(45deg); }
+  }
+  .floating-heart-el {
+    position: fixed; z-index: 60; pointer-events: none;
+    font-size: 20px;
+    animation: heartRise 3.6s ease-out forwards;
+  }
+  @keyframes heartRise {
+    0%   { opacity: 0; transform: translateY(0) scale(0.5); }
+    15%  { opacity: 1; }
+    80%  { opacity: 0.85; }
+    100% { opacity: 0; transform: translateY(-105vh) translateX(var(--drift, 35px)) scale(1.35); }
+  }
+
+  .hidden { display: none !important; }
+
+  /* ── Shared Typography & Shimmers ────────────────────────── */
+  .eyebrow {
+    font-family: var(--serif);
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .45em; text-transform: uppercase;
+    color: var(--gold-light);
+    display: inline-flex; align-items: center; gap: 14px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: ''; display: inline-block; width: 28px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+  }
+  .gold-shimmer {
+    background: linear-gradient(90deg, var(--champagne) 0%, var(--gold-light) 25%, var(--gold) 50%, var(--gold-light) 75%, var(--champagne) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    animation: shineText 4s linear infinite;
+  }
+  @keyframes shineText {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+  .gold-line {
+    display: inline-block; width: 80px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     INTRO SCREEN — 3D LUXURY WAX SEAL ENVELOPE
+     ═══════════════════════════════════════════════════════════ */
+  #intro {
+    position: fixed; inset: 0; z-index: 100;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 32px; padding: 24px;
+    background: radial-gradient(circle at center, rgba(23, 17, 40, 0.75) 0%, rgba(6, 4, 11, 0.88) 90%);
+    backdrop-filter: blur(6px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease;
+  }
+  #intro.fade {
+    opacity: 0;
+    transform: scale(1.05);
+    pointer-events: none;
+  }
+
+  .earphone-pill {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 8px 24px; border-radius: 30px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--champagne);
+    font-size: 11.5px; font-weight: 500;
+    letter-spacing: .18em; text-transform: uppercase;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(212,175,55,0.18);
+    animation: pillFloat 3.2s ease-in-out infinite alternate;
+  }
+  @keyframes pillFloat {
+    from { transform: translateY(-3px); }
+    to   { transform: translateY(3px); }
+  }
+  .earphone-pill .icon { font-size: 16px; animation: soundPulse 1.4s infinite; }
+  @keyframes soundPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.25);} }
+
+  .envelope-wrap {
+    position: relative; width: 340px; height: 228px;
+    cursor: pointer; perspective: 1200px;
+    animation: envSway 4.5s ease-in-out infinite alternate;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @keyframes envSway {
+    0%   { transform: translateY(-8px) rotate(-0.8deg); }
+    100% { transform: translateY(8px) rotate(0.8deg); }
+  }
+
+  .envelope-back {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(160deg, #251c36, #130e1f);
+    border-radius: 14px;
+    box-shadow: 0 35px 95px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,175,55,0.38);
+  }
+  .env-left {
+    position: absolute; inset: 0; z-index: 3;
+    background: linear-gradient(105deg, #2b203d, #1a1327);
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+    border-radius: 14px 0 0 14px;
+  }
+  .env-right {
+    position: absolute; inset: 0; z-index: 3;
+    background: linear-gradient(255deg, #2b203d, #1a1327);
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+    border-radius: 0 14px 14px 0;
+  }
+  .env-bottom {
+    position: absolute; inset: 0; z-index: 4;
+    background: linear-gradient(0deg, #302445, #1e162d);
+    clip-path: polygon(0 100%, 50% 43%, 100% 100%);
+    border-radius: 0 0 14px 14px;
+  }
+
+  .env-card {
+    position: absolute; top: 46%; left: 50%; z-index: 2;
+    width: 230px; padding: 24px 18px 28px;
+    background: linear-gradient(180deg, #fdfbf7, #f1e7d2);
+    border-radius: 8px;
+    box-shadow: 0 20px 48px rgba(0,0,0,0.6);
+    text-align: center;
+    transform: translate(-50%, -14%);
+    transition: transform 1.2s cubic-bezier(0.2, 0.9, 0.25, 1) 0.4s;
+    border: 1px solid rgba(212,175,55,0.25);
+  }
+  .envelope-wrap.open .env-card {
+    transform: translate(-50%, -132%);
+  }
+  .env-card .for {
+    font-size: 10px; font-weight: 600; letter-spacing: .45em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 6px;
+  }
+  .env-card .who {
+    font-family: var(--script);
+    font-size: 44px; color: #231b10; line-height: 1.1;
+  }
+  .env-card .tagline {
+    font-size: 10.5px; color: #735e40; font-style: italic; margin-top: 8px;
+    font-family: var(--editorial);
+  }
+
+  .envelope-flap {
+    position: absolute; top: 0; left: 0; right: 0; height: 126px; z-index: 5;
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    transition: transform 0.95s cubic-bezier(0.55, 0.05, 0.25, 1), z-index 0s 0.45s;
+  }
+  .envelope-wrap.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
+  .flap-front, .flap-lining {
+    position: absolute; inset: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    border-radius: 14px 14px 0 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flap-front { background: linear-gradient(180deg, #2e2342, #1b1427); }
+  .flap-lining {
+    background: linear-gradient(180deg, #d4af37 0%, #a68429 55%, #7a601c 100%);
+    transform: rotateX(180deg);
+  }
+
+  .seal {
+    position: absolute; bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 50px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f7d677, #7e5c15);
+    box-shadow: inset 0 1px 4px rgba(255,255,255,0.7), 0 8px 20px rgba(0,0,0,0.6);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 24px; color: #fffcf2;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    transition: transform 0.3s ease;
+  }
+  .envelope-wrap:hover .seal {
+    transform: translateX(-50%) scale(1.08);
+  }
+
+  .tap-hint {
+    font-size: 11px; letter-spacing: .45em; text-transform: uppercase;
+    color: var(--text-muted);
+    animation: hintBlink 2s ease-in-out infinite;
+  }
+  @keyframes hintBlink {
+    0%,100% { opacity: 0.5; transform: scale(1); }
+    50%     { opacity: 1; transform: scale(1.06); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     MAIN CELEBRATION
+     ═══════════════════════════════════════════════════════════ */
+  main { position: relative; z-index: 2; }
+
+  .section {
+    padding: 105px 24px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .reveal {
+    opacity: 0; transform: translateY(50px);
+    transition: opacity 1.15s cubic-bezier(0.2, 1, 0.3, 1), transform 1.15s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  .sec-head {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 16px; margin-bottom: 48px;
+  }
+  .sec-title {
+    font-family: var(--editorial); font-style: italic; font-weight: 400;
+    font-size: clamp(32px, 6.2vw, 48px);
+    color: var(--ivory);
+    text-shadow: 0 3px 28px rgba(0,0,0,0.55);
+    line-height: 1.22;
+    animation: secTitleGlow 4.5s ease-in-out infinite alternate;
+  }
+  @keyframes secTitleGlow {
+    0%   { text-shadow: 0 0 15px rgba(212,175,55,0.2), 0 3px 28px rgba(0,0,0,0.55); }
+    100% { text-shadow: 0 0 32px rgba(250,232,168,0.55), 0 3px 28px rgba(0,0,0,0.55); }
+  }
+  .sec-sub {
+    font-family: var(--editorial); font-style: italic;
+    font-size: 17px; color: var(--text-muted);
+    max-width: 600px; line-height: 1.75;
+    animation: subFloat 4.2s ease-in-out infinite alternate;
+  }
+  @keyframes subFloat {
+    0%   { transform: translateY(0); opacity: 0.85; }
+    100% { transform: translateY(-3px); opacity: 1; }
+  }
+
+  /* ── 1. Hero Section & Countdown ───────────────────────────── */
+  .hero { min-height: 100vh; justify-content: center; gap: 30px; position: relative; }
+  
+  .date-ribbon {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--serif); font-size: 12px; font-weight: 600;
+    letter-spacing: .35em; text-transform: uppercase;
+    color: var(--gold-light);
+    padding: 7px 24px; border-radius: 30px;
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.35);
+    box-shadow: 0 0 26px rgba(212,175,55,0.15);
+    animation: ribbonPulse 3s ease-in-out infinite alternate;
+  }
+  @keyframes ribbonPulse {
+    0%   { box-shadow: 0 0 16px rgba(212,175,55,0.18); transform: scale(1); }
+    100% { box-shadow: 0 0 35px rgba(250,232,168,0.5); transform: scale(1.03); border-color: var(--gold-light); }
+  }
+
+  #hbTitle {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(52px, 11vw, 112px);
+    line-height: 1.08;
+    letter-spacing: .02em;
+  }
+  #hbTitle span {
+    display: inline-block;
+    background: linear-gradient(180deg, #fff 5%, var(--gold-light) 30%, var(--gold) 70%, var(--gold-3) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 30px rgba(212,175,55,0.3));
+    opacity: 0;
+    animation: letterReveal 1s ease-out both, letterWave 4.6s ease-in-out infinite;
+  }
+  #hbTitle span.space { width: .36em; }
+  @keyframes letterReveal {
+    from { opacity: 0; transform: translateY(35px); filter: blur(10px); }
+    to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+  }
+  @keyframes letterWave {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-8px); }
+  }
+
+  .name-plate {
+    display: flex; align-items: center; gap: 20px;
+    opacity: 0; animation: fadeUp 1.2s ease both 1.1s, namePlateBreathe 4s ease-in-out infinite alternate 2.3s;
+  }
+  @keyframes namePlateBreathe {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+  }
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4.4vw, 32px);
+    letter-spacing: .38em; text-transform: uppercase;
+    color: var(--ivory);
+    padding-left: .38em;
+    background: linear-gradient(90deg, #ffffff 0%, var(--gold-light) 30%, var(--gold) 60%, #ffffff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text;
+    animation: nameShine 5s linear infinite;
+  }
+  @keyframes nameShine {
+    to { background-position: 200% center; }
+  }
+  .subtitle {
+    font-family: var(--editorial); font-style: italic;
+    font-size: clamp(16.5px, 3.4vw, 21px);
+    color: var(--champagne);
+    opacity: 0; animation: fadeUp 1.2s ease both 1.4s;
+    max-width: 660px; line-height: 1.85;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Countdown Widget */
+  .countdown-box {
+    display: flex; gap: 16px; justify-content: center;
+    margin-top: 10px;
+    opacity: 0; animation: fadeUp 1.2s ease both 1.7s;
+  }
+  .countdown-item {
+    background: rgba(20, 15, 32, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.32);
+    border-radius: 14px;
+    padding: 14px 18px;
+    min-width: 78px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease;
+    animation: cdItemFloat 4s ease-in-out infinite alternate;
+  }
+  .countdown-item:nth-child(2) { animation-delay: -1s; }
+  .countdown-item:nth-child(3) { animation-delay: -2s; }
+  .countdown-item:nth-child(4) { animation-delay: -3s; }
+  @keyframes cdItemFloat {
+    0%   { transform: translateY(0); box-shadow: 0 10px 25px rgba(0,0,0,0.45), 0 0 10px rgba(212,175,55,0.1); }
+    100% { transform: translateY(-6px); box-shadow: 0 16px 35px rgba(0,0,0,0.6), 0 0 25px rgba(250,232,168,0.35); border-color: var(--gold-light); }
+  }
+  .countdown-item:hover { transform: translateY(-8px) scale(1.05); border-color: var(--gold-light); }
+  .cd-val {
+    font-family: var(--serif); font-size: 28px; font-weight: 600;
+    color: var(--gold-light); display: block; line-height: 1;
+    animation: digitGlow 2.4s ease-in-out infinite alternate;
+  }
+  @keyframes digitGlow {
+    0%   { text-shadow: 0 0 8px rgba(212,175,55,0.3); }
+    100% { text-shadow: 0 0 22px rgba(250,232,168,0.8); }
+  }
+  .cd-lbl {
+    font-size: 9.5px; font-weight: 600; letter-spacing: .25em; text-transform: uppercase;
+    color: var(--text-muted); margin-top: 5px; display: block;
+  }
+
+  /* Preview Midnight Surprise Button */
+  .preview-surprise-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 16px;
+    padding: 8px 22px; border-radius: 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: var(--gold-light);
+    font-size: 11.5px; letter-spacing: .15em; text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0; animation: fadeUp 1.2s ease both 1.9s, btnPulseRing 3.2s ease-in-out infinite alternate 2.5s;
+  }
+  @keyframes btnPulseRing {
+    0%   { box-shadow: 0 0 12px rgba(212,175,55,0.2); }
+    100% { box-shadow: 0 0 28px rgba(250,232,168,0.5), 0 0 0 3px rgba(212,175,55,0.25); transform: translateY(-2px); }
+  }
+  .preview-surprise-btn:hover {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #150f02; font-weight: 600;
+    box-shadow: 0 0 25px rgba(212,175,55,0.6);
+    transform: translateY(-4px) scale(1.04);
+  }
+
+  .scroll-hint {
+    position: absolute; bottom: 26px; left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; animation: fadeIn 1.4s ease both 2.2s;
+  }
+  .scroll-hint svg { animation: bounceArrow 2.2s ease-in-out infinite; display: block; }
+  @keyframes bounceArrow {
+    0%,100% { transform: translateY(0); opacity: 0.4; }
+    50%     { transform: translateY(9px); opacity: 1; filter: drop-shadow(0 0 8px #fae8a8); }
+  }
+
+  /* ── 2. LDR Distance Radar & Live Flight Arc ───────────────── */
+  .ldr-panel {
+    width: 100%; max-width: 780px;
+    background: var(--bg-card);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 24px;
+    padding: 44px 34px;
+    box-shadow: 0 28px 75px rgba(0,0,0,0.6), 0 0 45px rgba(212,175,55,0.1);
+    backdrop-filter: blur(16px);
+    position: relative;
+    overflow: hidden;
+    animation: panelFloat 5.2s ease-in-out infinite alternate;
+  }
+  @keyframes panelFloat {
+    0%   { transform: translateY(0); box-shadow: 0 28px 75px rgba(0,0,0,0.6), 0 0 35px rgba(212,175,55,0.15); }
+    100% { transform: translateY(-7px); box-shadow: 0 36px 90px rgba(0,0,0,0.75), 0 0 55px rgba(250,232,168,0.35); border-color: rgba(250,232,168,0.5); }
+  }
+  .ldr-panel::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 10%, rgba(212,175,55,0.14), transparent 75%);
+    pointer-events: none;
+    animation: ldrMeshSweep 8s ease-in-out infinite alternate;
+  }
+  @keyframes ldrMeshSweep {
+    0%   { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.15) translateY(-10px); opacity: 1; }
+  }
+
+  .flight-radar {
+    position: relative;
+    width: 100%; height: 140px;
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 20px 0 28px;
+    padding: 0 20px;
+  }
+  .flight-node {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    z-index: 3; position: relative;
+    animation: nodeHover 3.6s ease-in-out infinite alternate;
+  }
+  .flight-node:nth-child(3) { animation-delay: -1.8s; }
+  @keyframes nodeHover {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+  }
+  .node-pin {
+    width: 58px; height: 58px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #322547, #130f1e);
+    border: 1.8px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 25px rgba(212,175,55,0.45);
+    position: relative;
+    animation: pinPulse 2.8s ease-in-out infinite alternate;
+  }
+  @keyframes pinPulse {
+    0%   { box-shadow: 0 0 18px rgba(212,175,55,0.3); transform: scale(1); }
+    100% { box-shadow: 0 0 35px rgba(250,232,168,0.7); transform: scale(1.06); border-color: var(--gold-light); }
+  }
+  .sonar-wave {
+    position: absolute; inset: -10px; border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    animation: sonarPing 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    pointer-events: none;
+  }
+  .sonar-wave::after {
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    border: 1.5px solid rgba(250,232,168,0.6);
+    animation: sonarPing 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite -1.3s;
+  }
+  @keyframes sonarPing {
+    0%   { transform: scale(0.6); opacity: 1; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+  .flight-node .location-title {
+    font-family: var(--serif); font-size: 13px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--gold-light);
+    animation: textGleam 3s ease-in-out infinite alternate;
+  }
+  @keyframes textGleam {
+    0%   { text-shadow: 0 0 5px rgba(212,175,55,0.2); }
+    100% { text-shadow: 0 0 14px rgba(250,232,168,0.7); }
+  }
+  .flight-node .location-desc {
+    font-size: 11px; color: var(--text-muted); font-style: italic;
+  }
+
+  .radar-svg-arc {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .ldr-stat-pill {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(224, 98, 135, 0.14);
+    border: 1px solid rgba(224, 98, 135, 0.38);
+    color: var(--blush);
+    padding: 8px 24px; border-radius: 30px;
+    font-size: 12.5px; font-weight: 500;
+    letter-spacing: .08em;
+    animation: statPillGlow 3s ease-in-out infinite alternate;
+  }
+  @keyframes statPillGlow {
+    0%   { transform: scale(1); box-shadow: 0 0 12px rgba(224,98,135,0.2); }
+    100% { transform: scale(1.03); box-shadow: 0 0 28px rgba(224,98,135,0.55); border-color: rgba(255,180,200,0.7); }
+  }
+  .ldr-stat-pill .heart-thump {
+    display: inline-block;
+    animation: thump 1.25s ease-in-out infinite;
+  }
+  @keyframes thump {
+    0%,100% { transform: scale(1); }
+    15% { transform: scale(1.35); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.22); }
+  }
+  .ldr-quote-text {
+    margin-top: 26px;
+    font-family: var(--editorial); font-style: italic;
+    font-size: 18.5px; color: var(--champagne);
+    line-height: 1.85;
+    animation: quoteBreathe 4.5s ease-in-out infinite alternate;
+  }
+  @keyframes quoteBreathe {
+    0%   { opacity: 0.88; transform: translateY(0); }
+    100% { opacity: 1; transform: translateY(-3px); text-shadow: 0 0 20px rgba(250,232,168,0.4); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     3. PERSONALIZED MEMORIES — WHY I FELL FOR POLLIMA 💖
+     Charming Eyes · Beautiful Hair · Cute Anger & Shashon · Maya
+     ═══════════════════════════════════════════════════════════ */
+  .polaroid-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    width: 100%; max-width: 1040px;
+    perspective: 1200px;
+  }
+  .flip-card {
+    height: 390px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .flip-card:nth-child(1) { animation: floatCard1 5.2s ease-in-out infinite alternate; }
+  .flip-card:nth-child(2) { animation: floatCard2 5.8s ease-in-out infinite alternate; }
+  .flip-card:nth-child(3) { animation: floatCard3 5.4s ease-in-out infinite alternate; }
+  .flip-card:nth-child(4) { animation: floatCard4 6.1s ease-in-out infinite alternate; }
+
+  @keyframes floatCard1 {
+    0%   { transform: rotate(-2.2deg) translateY(0); }
+    100% { transform: rotate(-0.5deg) translateY(-10px); }
+  }
+  @keyframes floatCard2 {
+    0%   { transform: rotate(1.8deg) translateY(0); }
+    100% { transform: rotate(3.2deg) translateY(-11px); }
+  }
+  @keyframes floatCard3 {
+    0%   { transform: rotate(-1.5deg) translateY(0); }
+    100% { transform: rotate(-3deg) translateY(-9px); }
+  }
+  @keyframes floatCard4 {
+    0%   { transform: rotate(2.4deg) translateY(0); }
+    100% { transform: rotate(0.8deg) translateY(-10px); }
+  }
+
+  .flip-card:hover { z-index: 10; }
+  .flip-card.flipped {
+    transform: rotateY(180deg) scale(1.05) !important;
+    z-index: 20;
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute; inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 22px 50px rgba(0,0,0,0.65), 0 0 0 1px rgba(212,175,55,0.25);
+    padding: 16px 16px 24px;
+  }
+  .flip-card-front {
+    background: #fdfbf7;
+    color: #2b2318;
+    text-align: center;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .flip-card-back {
+    background: linear-gradient(165deg, #fcf8ee 0%, #ede2cb 100%);
+    color: #2b2318;
+    transform: rotateY(180deg);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 24px 20px;
+    text-align: center;
+    border: 1.5px solid var(--gold);
+    box-shadow: inset 0 0 20px rgba(212,175,55,0.2);
+  }
+
+  .washi-tape {
+    position: absolute; top: -12px; left: 50%;
+    transform: translateX(-50%);
+    width: 72px; height: 25px;
+    background: rgba(235, 225, 205, 0.85);
+    border: 1px dashed rgba(160, 140, 110, 0.5);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    overflow: hidden;
+  }
+  .washi-tape::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+    transform: translateX(-100%);
+    animation: tapeSweep 3.5s ease-in-out infinite;
+  }
+  @keyframes tapeSweep {
+    0%   { transform: translateX(-100%); }
+    40%,100% { transform: translateX(100%); }
+  }
+
+  .polaroid-media-box {
+    width: 100%; height: 230px;
+    border-radius: 6px;
+    background: #181324;
+    overflow: hidden;
+    position: relative;
+  }
+  .polaroid-media-box svg {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  /* Real Photo Frame inside Polaroid Cards */
+  .polaroid-media-box.photo-frame {
+    position: relative;
+    box-shadow: inset 0 0 24px rgba(0,0,0,0.6);
+  }
+  .card-real-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.3, 1);
+  }
+  .card-real-photo.eyes-focus {
+    object-position: 50% 19%;
+    filter: brightness(1.08) contrast(1.05) saturate(1.06);
+  }
+  .card-real-photo.hair-focus {
+    object-position: 50% 30%;
+    filter: brightness(1.05) contrast(1.03) saturate(1.08);
+  }
+  .flip-card:hover .card-real-photo {
+    transform: scale(1.06);
+  }
+  .photo-ambient-vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at center, transparent 48%, rgba(12, 8, 22, 0.55) 100%);
+    pointer-events: none;
+  }
+  .photo-glow-border {
+    position: absolute; inset: 0;
+    border: 1.5px solid rgba(212, 175, 55, 0.45);
+    border-radius: 6px;
+    pointer-events: none;
+  }
+  .anim-glint-star {
+    position: absolute;
+    color: #fae8a8;
+    font-size: 15px;
+    pointer-events: none;
+    animation: starTwinkle 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(250, 232, 168, 0.95);
+    z-index: 2;
+  }
+  .glint-top-right { top: 8px; right: 10px; }
+  .glint-bottom-left { bottom: 8px; left: 10px; animation-delay: -1s; }
+
+  /* Interactive Specular Glare on Cards & Holographic Tickets */
+  .card-specular-glare {
+    position: absolute; inset: 0;
+    border-radius: 10px;
+    background: radial-gradient(circle 220px at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255,255,255,0.42) 0%, transparent 80%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    mix-blend-mode: overlay;
+    z-index: 5;
+  }
+  .flip-card:hover .card-specular-glare,
+  .flip-card:active .card-specular-glare,
+  .holo-ticket:hover .card-specular-glare,
+  .holo-ticket:active .card-specular-glare {
+    opacity: 1;
+  }
+
+  /* ── Memory SVG Micro-Animations ────────────────────────── */
+  /* Card 1: Charming Eyes */
+  .anim-svg-eyes .anim-eye-outline {
+    animation: eyeGlow 3s ease-in-out infinite alternate;
+  }
+  @keyframes eyeGlow {
+    0%   { filter: drop-shadow(0 0 2px rgba(212,175,55,0.4)); stroke-width: 2.2; }
+    100% { filter: drop-shadow(0 0 10px rgba(250,232,168,0.9)); stroke-width: 2.8; }
+  }
+  .anim-eye-center {
+    transform-origin: 110px 110px;
+    animation: pupilDilate 3.8s ease-in-out infinite alternate;
+  }
+  @keyframes pupilDilate {
+    0%,100% { transform: scale(1); }
+    50%     { transform: scale(1.08); }
+  }
+  .anim-eye-sparkle {
+    transform-origin: 102px 102px;
+    animation: glintPulse 2.2s ease-in-out infinite alternate;
+  }
+  @keyframes glintPulse {
+    0%   { transform: scale(0.85); opacity: 0.7; }
+    100% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 6px #fff); }
+  }
+  .anim-eye-brow {
+    stroke-dashoffset: 0;
+    animation: browDash 12s linear infinite;
+  }
+  @keyframes browDash {
+    to { stroke-dashoffset: 100; }
+  }
+  .anim-star-glint {
+    transform-origin: center;
+    animation: starTwinkle 2.4s ease-in-out infinite alternate;
+  }
+  .glint-1 { animation-delay: 0s; }
+  .glint-2 { animation-delay: -0.8s; }
+  .glint-3 { animation-delay: -1.6s; }
+  @keyframes starTwinkle {
+    0%   { transform: scale(0.7); opacity: 0.4; }
+    100% { transform: scale(1.5); opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
+  }
+
+  /* Card 2: Silken Hair */
+  .anim-svg-hair .anim-hair-mass {
+    transform-origin: 110px 30px;
+    animation: hairSway 4.4s ease-in-out infinite alternate;
+  }
+  @keyframes hairSway {
+    0%   { transform: rotate(-1.5deg) scaleX(0.98); }
+    100% { transform: rotate(1.8deg) scaleX(1.02); }
+  }
+  .anim-hair-strand-a {
+    animation: strandGlow 3s ease-in-out infinite alternate;
+  }
+  .anim-hair-strand-b {
+    animation: strandGlow 3s ease-in-out infinite alternate -1.5s;
+  }
+  @keyframes strandGlow {
+    0%   { filter: drop-shadow(0 0 2px rgba(212,175,55,0.3)); }
+    100% { filter: drop-shadow(0 0 10px rgba(250,232,168,0.8)); }
+  }
+  .anim-hair-flower {
+    transform-origin: 140px 65px;
+    animation: flowerBob 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes flowerBob {
+    0%   { transform: rotate(-6deg) scale(0.95); }
+    100% { transform: rotate(6deg) scale(1.08); filter: drop-shadow(0 0 10px rgba(224,98,135,0.7)); }
+  }
+
+  /* Card 3: Cute Anger & Shashon */
+  .anim-svg-anger .anim-anger-heart {
+    transform-origin: 110px 115px;
+    animation: cuteHeartPulse 1.4s ease-in-out infinite;
+  }
+  @keyframes cuteHeartPulse {
+    0%,100% { transform: scale(1); }
+    15%     { transform: scale(1.12); }
+    30%     { transform: scale(1.03); }
+    45%     { transform: scale(1.16); }
+  }
+  .anim-anger-crown {
+    transform-origin: 110px 58px;
+    animation: crownWiggle 2.6s ease-in-out infinite alternate;
+  }
+  @keyframes crownWiggle {
+    0%   { transform: translateY(0) rotate(-4deg); }
+    100% { transform: translateY(-3px) rotate(4deg); filter: drop-shadow(0 0 8px #fae8a8); }
+  }
+  .anim-anger-brow {
+    animation: browFurrow 2.2s ease-in-out infinite alternate;
+  }
+  @keyframes browFurrow {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(2px) scaleY(1.15); }
+  }
+  .anim-blush {
+    animation: blushPulse 2s ease-in-out infinite alternate;
+  }
+  @keyframes blushPulse {
+    0%   { opacity: 0.35; transform: scale(0.9); }
+    100% { opacity: 0.85; transform: scale(1.25); filter: drop-shadow(0 0 8px rgba(255,100,150,0.8)); }
+  }
+
+  /* Card 4: Never Leaving Me / Maya */
+  .anim-svg-maya .anim-maya-ring {
+    transform-origin: 110px 110px;
+    animation: ringSpin 20s linear infinite;
+  }
+  @keyframes ringSpin {
+    to { transform: rotate(360deg); }
+  }
+  .anim-maya-ekg {
+    animation: ekgPulse 2.4s ease-in-out infinite alternate;
+  }
+  @keyframes ekgPulse {
+    0%   { stroke: #fae8a8; filter: drop-shadow(0 0 3px #fae8a8); }
+    50%  { stroke: #ff9ec2; filter: drop-shadow(0 0 12px #e06287) drop-shadow(0 0 20px #fae8a8); }
+    100% { stroke: #fae8a8; filter: drop-shadow(0 0 3px #fae8a8); }
+  }
+  .anim-hands-holding {
+    transform-origin: 110px 110px;
+    animation: handsGentleSway 3.2s ease-in-out infinite alternate;
+  }
+  @keyframes handsGentleSway {
+    0%   { transform: scale(0.96) rotate(-2deg); }
+    100% { transform: scale(1.04) rotate(2deg); filter: drop-shadow(0 0 10px rgba(212,175,55,0.7)); }
+  }
+  .anim-protect-shield {
+    transform-origin: 110px 130px;
+    animation: shieldBreath 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes shieldBreath {
+    0%   { opacity: 0.25; transform: scale(0.96); }
+    100% { opacity: 0.55; transform: scale(1.05); filter: drop-shadow(0 0 12px #fff); }
+  }
+
+  .polaroid-title {
+    font-family: var(--script);
+    font-size: 27px; color: #2e2213;
+    margin-top: 12px; line-height: 1.15;
+    animation: titleGleam 4s ease-in-out infinite alternate;
+  }
+  @keyframes titleGleam {
+    0%   { filter: drop-shadow(0 0 0 rgba(212,175,55,0)); }
+    100% { filter: drop-shadow(0 0 8px rgba(212,175,55,0.4)); }
+  }
+  .polaroid-sub {
+    font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
+    color: #8c7857; margin-top: 4px;
+  }
+
+  .card-back-quote-tag {
+    font-family: var(--serif); font-size: 10.5px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 12px;
+  }
+  .card-back-note {
+    font-family: var(--editorial); font-style: italic;
+    font-size: 16px; line-height: 1.85; color: #352a1b;
+  }
+  .card-back-heart {
+    font-size: 26px; color: var(--rose); margin-top: 14px;
+    animation: heartBeatSway 2s ease-in-out infinite alternate;
+  }
+  @keyframes heartBeatSway {
+    0%   { transform: scale(0.95); }
+    100% { transform: scale(1.2); filter: drop-shadow(0 0 10px rgba(224,98,135,0.8)); }
+  }
+
+  /* ── 4. Cake & Candle Section ──────────────────────────────── */
+  .cake-svg {
+    width: min(320px, 80vw); height: auto;
+    cursor: pointer; -webkit-tap-highlight-color: transparent;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 38px rgba(212,175,55,0.18));
+    animation: cakeLevitate 5s ease-in-out infinite alternate;
+  }
+  @keyframes cakeLevitate {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-7px); }
+  }
+  .cake-svg:hover { transform: scale(1.03) translateY(-9px); }
+  .flame {
+    transform-box: fill-box; transform-origin: 50% 100%;
+    filter: drop-shadow(0 0 12px rgba(250,232,168,0.95));
+  }
+  .flame.flame-1 { animation: flameDance1 0.95s ease-in-out infinite alternate; }
+  .flame.flame-2 { animation: flameDance2 1.25s ease-in-out infinite alternate; }
+  .flame.flame-3 { animation: flameDance3 1.05s ease-in-out infinite alternate; }
+
+  @keyframes flameDance1 {
+    0%   { transform: rotate(-3deg) scaleY(1); }
+    100% { transform: rotate(3deg) scaleY(0.88) scaleX(1.1); filter: drop-shadow(0 0 18px #ffbe3b); }
+  }
+  @keyframes flameDance2 {
+    0%   { transform: rotate(2.5deg) scaleY(1.06); }
+    100% { transform: rotate(-2.5deg) scaleY(0.86) scaleX(1.14); filter: drop-shadow(0 0 22px #ffe57f); }
+  }
+  @keyframes flameDance3 {
+    0%   { transform: rotate(-2deg) scaleY(0.92); }
+    100% { transform: rotate(3deg) scaleY(1.08) scaleX(1.06); filter: drop-shadow(0 0 18px #ffbe3b); }
+  }
+  .cake-pearl {
+    animation: pearlTwinkle 2.8s ease-in-out infinite alternate;
+  }
+  @keyframes pearlTwinkle {
+    0%   { filter: drop-shadow(0 0 2px #d4af37); }
+    100% { filter: drop-shadow(0 0 8px #fff) drop-shadow(0 0 14px #fae8a8); }
+  }
+  .cake-svg.blown .flame {
+    animation: none;
+    transform: scale(0); opacity: 0;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+  }
+  .smoke { opacity: 0; transform-box: fill-box; transform-origin: center; }
+  .cake-svg.blown .smoke { animation: curlUp 1.6s ease-out forwards; }
+  @keyframes curlUp {
+    0%   { opacity: 0.6; transform: translateY(0) scale(0.4); }
+    100% { opacity: 0; transform: translateY(-60px) scale(2.6); }
+  }
+  .wish-banner {
+    margin-top: 32px;
+    font-family: var(--editorial); font-style: italic;
+    font-size: clamp(24px, 5.2vw, 36px);
+    color: var(--gold-light);
+    text-shadow: 0 0 30px rgba(212,175,55,0.4);
+    animation: popBanner 0.9s cubic-bezier(0.2, 1.1, 0.3, 1) both;
+  }
+  @keyframes popBanner {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Interactive Relight Button */
+  .relight-cake-btn {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(212,175,55,0.22), rgba(224,98,135,0.2));
+    border: 1.5px solid rgba(250,232,168,0.55);
+    color: var(--gold-light);
+    font-family: var(--serif);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 25px rgba(212,175,55,0.3);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+    -webkit-tap-highlight-color: transparent;
+    animation: popBanner 0.6s cubic-bezier(0.2, 1.1, 0.3, 1) both;
+  }
+  .relight-cake-btn:hover, .relight-cake-btn:active {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #140d04;
+    box-shadow: 0 0 35px rgba(250,232,168,0.7);
+  }
+
+  /* ── 5. Parchment Love Letter (Typewriter) ─────────────────── */
+  .parchment {
+    position: relative;
+    max-width: 680px; width: 100%;
+    background: linear-gradient(180deg, #fdfbf7, #f3ebd8);
+    color: #2b2216;
+    border-radius: 14px;
+    padding: 60px 46px 46px;
+    box-shadow: 0 35px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(212,175,55,0.3);
+    border: 1px solid rgba(212,175,55,0.4);
+  }
+  .parchment-seal {
+    position: absolute; top: -30px; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 60px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f1cf6d, #7e5c15);
+    border: 1.5px solid var(--gold-light);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.5), inset 0 1px 4px rgba(255,255,255,0.6);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 26px; color: #fffcf2;
+  }
+  .parchment-greeting {
+    font-family: var(--editorial); font-style: italic;
+    font-size: clamp(26px, 5vw, 34px);
+    color: #352a1b;
+    margin-bottom: 24px;
+  }
+  #typewriter {
+    font-family: var(--editorial);
+    text-align: left; white-space: pre-wrap;
+    line-height: 2.1; font-size: 17px; color: #2d2417;
+    min-height: 140px;
+  }
+  #typewriter.typing::after {
+    content: '|'; color: var(--gold-deep);
+    animation: cursorBlink 0.85s step-end infinite;
+  }
+  @keyframes cursorBlink { 50% { opacity: 0; } }
+  .letter-sign {
+    margin-top: 32px; text-align: right;
+    font-family: var(--script);
+    font-size: clamp(30px, 5.5vw, 38px);
+    color: var(--gold-deep);
+    opacity: 0; transition: opacity 1.4s ease;
+  }
+  .letter-sign.show { opacity: 1; }
+
+  /* ═══════════════════════════════════════════════════════════
+     6. RE-INVENTED HOLOGRAPHIC VIP LOVE TICKETS & LOVE WALLET
+     Animated Scratch, Holographic Shimmer, Wax Stamp, & Counter
+     ═══════════════════════════════════════════════════════════ */
+  .ticket-section-wrap {
+    width: 100%; max-width: 960px;
+    display: flex; flex-direction: column; align-items: center; gap: 32px;
+  }
+
+  /* Interactive Love Wallet Tracker */
+  .love-wallet-bar {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 12px 28px; border-radius: 40px;
+    background: rgba(26, 18, 38, 0.85);
+    border: 1.5px solid var(--gold);
+    box-shadow: 0 0 30px rgba(212,175,55,0.25);
+    backdrop-filter: blur(14px);
+  }
+  .wallet-icon { font-size: 22px; animation: walletPulse 1.8s ease-in-out infinite; }
+  @keyframes walletPulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.2) rotate(-5deg);} }
+  .wallet-text {
+    font-family: var(--serif); font-size: 13px; font-weight: 600;
+    letter-spacing: .15em; text-transform: uppercase; color: var(--gold-light);
+  }
+  .wallet-stars {
+    display: flex; gap: 6px; font-size: 16px; color: rgba(250,232,168,0.3);
+  }
+  .wallet-star.active {
+    color: var(--gold-light);
+    filter: drop-shadow(0 0 8px var(--gold));
+    animation: starPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes starPop { from { transform: scale(0.4); } to { transform: scale(1.3); } }
+
+  .ticket-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px; width: 100%;
+  }
+
+  /* Holographic Golden Ticket */
+  .holo-ticket {
+    background: linear-gradient(135deg, rgba(32, 22, 48, 0.95), rgba(16, 11, 26, 0.98));
+    border: 2px solid rgba(212,175,55,0.45);
+    border-radius: 20px;
+    padding: 30px 24px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.65);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .holo-ticket:nth-child(1) { animation: ticketFloat1 4.8s ease-in-out infinite alternate; }
+  .holo-ticket:nth-child(2) { animation: ticketFloat2 5.5s ease-in-out infinite alternate; }
+  .holo-ticket:nth-child(3) { animation: ticketFloat3 5.0s ease-in-out infinite alternate; }
+  .holo-ticket:nth-child(4) { animation: ticketFloat4 5.8s ease-in-out infinite alternate; }
+
+  @keyframes ticketFloat1 { 0% { transform: translateY(0); } 100% { transform: translateY(-8px); } }
+  @keyframes ticketFloat2 { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+  @keyframes ticketFloat3 { 0% { transform: translateY(0); } 100% { transform: translateY(-7px); } }
+  @keyframes ticketFloat4 { 0% { transform: translateY(0); } 100% { transform: translateY(-9px); } }
+
+  .holo-ticket::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(115deg, transparent 20%, rgba(250,232,168,0.18) 45%, rgba(224,98,135,0.22) 55%, transparent 75%);
+    background-size: 200% 200%;
+    pointer-events: none;
+    animation: holoGleam 4s ease-in-out infinite;
+  }
+  @keyframes holoGleam {
+    0%   { background-position: -100% -100%; }
+    100% { background-position: 200% 200%; }
+  }
+  .holo-ticket:hover {
+    transform: translateY(-12px) scale(1.03);
+    border-color: var(--gold-light);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.85), 0 0 45px rgba(250,232,168,0.45);
+  }
+
+  /* Perforated side ticket notches */
+  .notch-left, .notch-right {
+    position: absolute; top: 50%; width: 22px; height: 22px;
+    border-radius: 50%; background: var(--bg-dark);
+    transform: translateY(-50%);
+  }
+  .notch-left  { left: -11px; border-right: 2px dashed rgba(212,175,55,0.45); }
+  .notch-right { right: -11px; border-left: 2px dashed rgba(212,175,55,0.45); }
+
+  .ticket-top-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px;
+  }
+  .ticket-number {
+    font-family: var(--serif); font-size: 11px; font-weight: 700;
+    letter-spacing: .25em; text-transform: uppercase; color: var(--gold-2);
+  }
+  .ticket-seal-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--blush); background: rgba(224,98,135,0.15);
+    padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(224,98,135,0.3);
+    animation: badgePulse 2.4s ease-in-out infinite alternate;
+  }
+  @keyframes badgePulse {
+    0%   { transform: scale(1); }
+    100% { transform: scale(1.06); filter: drop-shadow(0 0 6px rgba(224,98,135,0.6)); }
+  }
+
+  .ticket-heading {
+    font-family: var(--editorial); font-size: 23px; color: var(--ivory);
+    margin-bottom: 10px; line-height: 1.28;
+  }
+  .ticket-description {
+    font-size: 13.5px; color: var(--text-muted); line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .ticket-interactive-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 12px 18px; border-radius: 30px;
+    background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+    border: 1px solid rgba(212,175,55,0.4);
+    color: var(--gold-light);
+    font-family: var(--serif); font-size: 11.5px; font-weight: 700;
+    letter-spacing: .16em; text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .ticket-interactive-btn::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+    transform: translateX(-100%);
+    animation: btnLightSweep 3.2s ease-in-out infinite;
+  }
+  @keyframes btnLightSweep {
+    0%   { transform: translateX(-100%); }
+    40%,100% { transform: translateX(100%); }
+  }
+  .holo-ticket:hover .ticket-interactive-btn {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #160f01; font-weight: 700;
+    box-shadow: 0 0 25px rgba(212,175,55,0.55);
+  }
+
+  /* Physical Stamp Impact Animation when Claimed */
+  .holo-stamp {
+    position: absolute; right: 20px; top: 20px;
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 3px dashed var(--gold-light);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--gold-light);
+    font-family: var(--serif); font-size: 10px; font-weight: 900;
+    letter-spacing: .15em; text-transform: uppercase;
+    transform: rotate(18deg) scale(0);
+    opacity: 0;
+    background: radial-gradient(circle, rgba(212,175,55,0.25), transparent);
+    box-shadow: 0 0 25px rgba(250,232,168,0.6);
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+  }
+  .holo-ticket.claimed .holo-stamp {
+    transform: rotate(18deg) scale(1);
+    opacity: 1;
+  }
+  .holo-ticket.claimed .ticket-interactive-btn {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #160f01; font-weight: 700; border: none;
+  }
+
+  /* Grand Unlock Banner when all 4 are claimed */
+  .all-claimed-banner {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(45, 30, 65, 0.95), rgba(22, 14, 34, 0.95));
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 0 45px rgba(212,175,55,0.35);
+    animation: popBanner 0.9s cubic-bezier(0.2, 1.1, 0.3, 1) both;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     7. COSMIC PORTAL: CELESTIAL SANCTUARY
+     ═══════════════════════════════════════════════════════════ */
+  .wishes-portal-card {
+    position: relative;
+    width: 100%; max-width: 820px;
+    background: linear-gradient(135deg, rgba(38, 26, 56, 0.94), rgba(16, 11, 26, 0.98));
+    border: 2px solid var(--gold);
+    border-radius: 28px;
+    padding: 50px 36px;
+    text-align: center;
+    box-shadow: 0 30px 90px rgba(0,0,0,0.8), 0 0 50px rgba(212,175,55,0.25);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+    margin-top: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: portalCardFloat 5.6s ease-in-out infinite alternate;
+  }
+  @keyframes portalCardFloat {
+    0%   { transform: translateY(0); box-shadow: 0 30px 90px rgba(0,0,0,0.8), 0 0 45px rgba(212,175,55,0.25); }
+    100% { transform: translateY(-8px); box-shadow: 0 38px 105px rgba(0,0,0,0.85), 0 0 70px rgba(250,232,168,0.45); }
+  }
+  .wishes-portal-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 40px 110px rgba(0,0,0,0.9), 0 0 75px rgba(250,232,168,0.55);
+  }
+  .portal-halo {
+    position: absolute; top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 320px; height: 160px;
+    background: radial-gradient(ellipse, rgba(212,175,55,0.35), transparent 70%);
+    pointer-events: none;
+    animation: haloPulse 4s ease-in-out infinite alternate;
+  }
+  @keyframes haloPulse {
+    0%   { transform: translateX(-50%) scale(0.9); opacity: 0.6; }
+    100% { transform: translateX(-50%) scale(1.15); opacity: 1; }
+  }
+  .portal-crown {
+    font-size: 42px; margin-bottom: 12px;
+    display: inline-block;
+    filter: drop-shadow(0 0 15px rgba(250,232,168,0.6));
+    animation: portalFloat 3s ease-in-out infinite alternate;
+  }
+  @keyframes portalFloat {
+    from { transform: translateY(-4px) scale(1); }
+    to   { transform: translateY(5px) scale(1.08); }
+  }
+  .portal-heading {
+    font-family: var(--editorial); font-size: clamp(28px, 5.5vw, 42px);
+    font-style: italic; color: var(--ivory);
+    margin-bottom: 14px; line-height: 1.25;
+  }
+  .portal-desc {
+    font-family: var(--editorial); font-style: italic;
+    font-size: 16.5px; line-height: 1.85; color: var(--champagne);
+    max-width: 620px; margin: 0 auto 30px;
+  }
+  .portal-action-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px 38px; border-radius: 40px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #120d02; font-family: var(--serif);
+    font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: ctaPulse 2.8s ease-in-out infinite alternate;
+  }
+  @keyframes ctaPulse {
+    0%   { box-shadow: 0 10px 30px rgba(212,175,55,0.4); }
+    100% { box-shadow: 0 0 45px rgba(250,232,168,0.85), 0 0 0 4px rgba(212,175,55,0.3); }
+  }
+  .portal-action-btn::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+    transform: translateX(-100%);
+    animation: btnLightSweep 3.2s ease-in-out infinite;
+  }
+  .portal-action-btn:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 0 50px rgba(250,232,168,0.9);
+    color: #000;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     MIDNIGHT BIG SURPRISE MODAL (When Countdown Ends / 12:00 AM)
+     ═══════════════════════════════════════════════════════════ */
+  .midnight-overlay {
+    position: fixed; inset: 0; z-index: 250;
+    background: rgba(6, 4, 11, 0.88);
+    backdrop-filter: blur(20px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.8s ease;
+  }
+  .midnight-overlay.active {
+    opacity: 1; pointer-events: auto;
+  }
+
+  .midnight-card {
+    background: linear-gradient(145deg, rgba(35, 24, 52, 0.95), rgba(16, 11, 26, 0.98));
+    border: 2px solid var(--gold-light);
+    border-radius: 28px;
+    padding: 46px 36px;
+    max-width: 580px; width: 100%;
+    text-align: center;
+    box-shadow: 0 35px 100px rgba(0,0,0,0.85), 0 0 60px rgba(212,175,55,0.3);
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .midnight-overlay.active .midnight-card {
+    transform: scale(1);
+  }
+  .midnight-crown {
+    font-size: 48px;
+    animation: crownFloat 2.4s ease-in-out infinite alternate;
+    display: inline-block;
+    filter: drop-shadow(0 0 20px rgba(250,232,168,0.7));
+  }
+  @keyframes crownFloat {
+    from { transform: translateY(-6px) rotate(-3deg); }
+    to   { transform: translateY(6px) rotate(3deg); }
+  }
+  .midnight-badge {
+    font-family: var(--serif); font-size: 11px; font-weight: 700;
+    letter-spacing: .3em; text-transform: uppercase;
+    color: var(--gold-light); margin: 12px 0 8px;
+  }
+  .midnight-title {
+    font-family: var(--editorial); font-size: clamp(28px, 6vw, 42px);
+    font-weight: 700; color: var(--ivory);
+    line-height: 1.2; margin-bottom: 6px;
+  }
+  .midnight-name {
+    font-family: var(--script); font-size: 46px; color: var(--gold-light);
+    line-height: 1.1; margin-bottom: 12px;
+  }
+  .midnight-body {
+    font-family: var(--editorial); font-style: italic;
+    font-size: 16.5px; line-height: 1.85; color: var(--champagne);
+    margin: 16px 0 28px;
+  }
+  .midnight-action-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 34px; border-radius: 35px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-3));
+    color: #170f01; font-family: var(--serif);
+    font-size: 13.5px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+    border: none; cursor: pointer;
+    box-shadow: 0 10px 30px rgba(212,175,55,0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .midnight-action-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 35px rgba(250,232,168,0.75);
+  }
+
+  /* ── Footer ────────────────────────────────────────────────── */
+  footer {
+    position: relative; z-index: 2;
+    text-align: center; padding: 60px 20px 150px;
+    font-family: var(--serif);
+    font-size: 11px; letter-spacing: .35em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  footer .dot { color: var(--gold); padding: 0 8px; }
+
+  /* ── Floating Action Bar (FAB) ─────────────────────────────── */
+  .fab-dock {
+    position: fixed;
+    right: calc(20px + env(safe-area-inset-right));
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    z-index: 70;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .fab-pill {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1px solid rgba(212,175,55,0.5);
+    background: rgba(18, 14, 28, 0.85);
+    color: var(--gold-light);
+    font-size: 19px; line-height: 1;
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.5);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex; align-items: center; justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .fab-pill:hover {
+    transform: scale(1.1);
+    border-color: var(--gold-light);
+    box-shadow: 0 0 28px rgba(212,175,55,0.4);
+  }
+  .fab-pill:active { transform: scale(0.92); }
+  .fab-pill.active {
+    background: linear-gradient(180deg, #e6c56b, #b8922e);
+    color: #120e1a;
+    animation: fabGlow 1.5s ease-in-out infinite;
+  }
+  @keyframes fabGlow {
+    0%,100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.6), 0 14px 34px rgba(0,0,0,0.5); }
+    50%     { box-shadow: 0 0 0 14px rgba(212,175,55,0), 0 14px 34px rgba(0,0,0,0.5); }
+  }
+
+  /* Luxury Audio Player Pill */
+  .fab-pill.music-pill {
+    width: auto;
+    min-width: 52px;
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 26px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(22, 16, 36, 0.9);
+    border: 1.5px solid rgba(212, 175, 55, 0.55);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.6), 0 0 22px rgba(212,175,55,0.2);
+  }
+  .fab-pill.music-pill.active {
+    background: linear-gradient(135deg, rgba(212,175,55,0.3), rgba(224,98,135,0.25));
+    border-color: var(--gold-light);
+    box-shadow: 0 0 30px rgba(250,232,168,0.5);
+  }
+  .eq-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 15px;
+  }
+  .eq-bars .bar {
+    width: 3.5px;
+    background: var(--gold-light);
+    border-radius: 2px;
+    height: 5px;
+    transition: height 0.2s ease;
+  }
+  .fab-pill.music-pill.active .eq-bars .bar-1 { animation: eqBounce1 0.7s ease-in-out infinite alternate; }
+  .fab-pill.music-pill.active .eq-bars .bar-2 { animation: eqBounce2 0.5s ease-in-out infinite alternate; }
+  .fab-pill.music-pill.active .eq-bars .bar-3 { animation: eqBounce3 0.85s ease-in-out infinite alternate; }
+  @keyframes eqBounce1 { 0% { height: 4px; } 100% { height: 15px; } }
+  @keyframes eqBounce2 { 0% { height: 14px; } 100% { height: 5px; } }
+  @keyframes eqBounce3 { 0% { height: 5px; } 100% { height: 16px; } }
+  .music-pill-label {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     IPHONE 11 & MOBILE OPTIMIZATIONS (414px × 896px Viewport)
+     Notch Safe Area, Home Bar Insets, Smooth Touch Ergonomics
+     ═══════════════════════════════════════════════════════════ */
+  @media (max-width: 640px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+    }
+    .section {
+      padding: 70px 16px;
+    }
+
+    /* Realistic Pollima Moon on iPhone 11 */
+    .moon-wrapper {
+      top: calc(12px + env(safe-area-inset-top));
+      right: calc(12px + env(safe-area-inset-right));
+      width: 86px;
+      height: 86px;
+    }
+    .moon-sky-flood {
+      top: -120px;
+      right: -100px;
+      width: 480px;
+      height: 480px;
+      filter: blur(50px);
+    }
+    .moon-poetic-badge {
+      padding: 3.5px 10px;
+      top: calc(100% + 7px);
+    }
+    .moon-poetic-badge .badge-text {
+      font-size: 8px;
+      letter-spacing: .08em;
+    }
+    .night-cloud-back {
+      width: 210px;
+      height: 95px;
+      filter: blur(18px);
+    }
+    .night-cloud-front {
+      width: 175px;
+      height: 75px;
+      filter: blur(14px);
+    }
+
+    /* Intro on iPhone 11 */
+    #intro {
+      min-height: 100svh;
+      padding: max(20px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+      gap: 24px;
+    }
+    .envelope-wrap {
+      width: min(310px, 86vw);
+      height: 208px;
+    }
+    .env-card {
+      width: min(230px, 75vw);
+      padding: 20px 14px;
+    }
+    .env-card .who {
+      font-size: 38px;
+    }
+
+    /* Hero Section on iPhone 11 */
+    .hero {
+      min-height: 100svh;
+      padding: max(24px, env(safe-area-inset-top)) 16px 36px;
+      gap: 20px;
+    }
+    .date-ribbon {
+      font-size: 10.5px;
+      padding: 6px 18px;
+      letter-spacing: .25em;
+    }
+    #hbTitle {
+      font-size: clamp(38px, 10.5vw, 68px);
+      line-height: 1.1;
+    }
+    .name-plate {
+      gap: 12px;
+    }
+    .hero-name {
+      font-size: clamp(18px, 4.8vw, 24px);
+      letter-spacing: .25em;
+      padding-left: .25em;
+    }
+    .subtitle {
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 0 6px;
+    }
+
+    /* Live Countdown 4-box grid on 414px iPhone */
+    .countdown-box {
+      gap: 6px;
+      width: 100%;
+      max-width: 360px;
+    }
+    .countdown-item {
+      min-width: 0;
+      flex: 1;
+      max-width: 78px;
+      padding: 10px 4px;
+      border-radius: 12px;
+    }
+    .cd-val {
+      font-size: 21px;
+    }
+    .cd-lbl {
+      font-size: 8px;
+      letter-spacing: .12em;
+    }
+    .preview-surprise-btn {
+      font-size: 10.5px;
+      padding: 7px 18px;
+    }
+
+    /* LDR Flight Radar on iPhone 11 (Retaining Arc!) */
+    .ldr-panel {
+      padding: 28px 14px 24px;
+      border-radius: 20px;
+    }
+    .flight-radar {
+      height: 110px;
+      padding: 0 4px;
+      margin: 10px 0 18px;
+    }
+    .node-pin {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+    }
+    .flight-node .location-title {
+      font-size: 11px;
+      letter-spacing: .1em;
+    }
+    .flight-node .location-desc {
+      font-size: 9.5px;
+    }
+    .ldr-stat-pill {
+      font-size: 11px;
+      padding: 6px 14px;
+      text-align: center;
+    }
+    .ldr-quote-text {
+      font-size: 15px;
+      line-height: 1.75;
+      margin-top: 18px;
+    }
+
+    /* Memory Polaroid Cards on iPhone 11 */
+    .polaroid-deck {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 28px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    .flip-card {
+      width: 100%;
+      max-width: 310px;
+      height: 385px;
+    }
+    .polaroid-media-box {
+      height: 215px;
+    }
+    .card-back-note {
+      font-size: 14.5px;
+      line-height: 1.75;
+      padding: 0 6px;
+    }
+
+    /* Birthday Cake on iPhone 11 */
+    .cake-svg {
+      width: min(250px, 72vw);
+    }
+    #cakeHint {
+      font-size: 11px;
+      letter-spacing: .2em;
+    }
+
+    /* Parchment Love Letter on iPhone 11 */
+    .parchment {
+      padding: 42px 18px 28px;
+      border-radius: 14px;
+    }
+    .parchment-seal {
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      top: -24px;
+    }
+    .parchment-greeting {
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
+    #typewriter {
+      font-size: 14.5px;
+      line-height: 1.85;
+      min-height: 160px;
+    }
+    .letter-sign {
+      font-size: 26px;
+    }
+
+    /* Holographic VIP Tickets on iPhone 11 */
+    .love-wallet-bar {
+      padding: 10px 18px;
+      font-size: 11.5px;
+      gap: 10px;
+      width: 100%;
+      justify-content: center;
+    }
+    .ticket-board {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    .holo-ticket {
+      padding: 24px 16px;
+      border-radius: 16px;
+    }
+    .ticket-heading {
+      font-size: 19px;
+      line-height: 1.3;
+    }
+    .ticket-description {
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+    .ticket-interactive-btn {
+      padding: 12px 16px;
+      font-size: 11px;
+    }
+
+    /* Cosmic Portal Card on iPhone 11 */
+    .wishes-portal-card {
+      padding: 34px 16px 28px;
+      border-radius: 20px;
+      max-width: 340px;
+      margin: 20px auto 0;
+    }
+    .portal-heading {
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    .portal-desc {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .portal-action-btn {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 11.5px;
+      letter-spacing: .12em;
+    }
+
+    /* Midnight Surprise Modal on iPhone 11 */
+    .midnight-overlay {
+      padding: max(16px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+    }
+    .midnight-card {
+      padding: 30px 16px;
+      max-height: 88svh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 22px;
+    }
+    .midnight-crown {
+      font-size: 40px;
+    }
+    .midnight-title {
+      font-size: 23px;
+    }
+    .midnight-name {
+      font-size: 20px;
+    }
+    .midnight-body {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .midnight-action-btn {
+      width: 100%;
+      padding: 13px 20px;
+      font-size: 12px;
+    }
+
+    /* Footer on iPhone 11 */
+    footer {
+      padding: 30px 16px calc(50px + env(safe-area-inset-bottom));
+      font-size: 9.5px;
+      letter-spacing: .2em;
+    }
+
+    /* FAB Dock on iPhone 11 */
+    .fab-dock {
+      right: calc(14px + env(safe-area-inset-right));
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      gap: 10px;
+    }
+    .fab-pill {
+      width: 48px;
+      height: 48px;
+      font-size: 17px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Shared SVG Gradients -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldStroke" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fae8a8"/>
+        <stop offset="50%" stop-color="#d4af37"/>
+        <stop offset="100%" stop-color="#a68429"/>
+      </linearGradient>
+      <radialGradient id="flameGrad" cx="50%" cy="68%" r="72%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="35%" stop-color="#fae8a8"/>
+        <stop offset="75%" stop-color="#f0b83e"/>
+        <stop offset="100%" stop-color="#c98a1a"/>
+      </radialGradient>
+      <linearGradient id="hairGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#2c2138"/>
+        <stop offset="50%" stop-color="#7a5578"/>
+        <stop offset="100%" stop-color="#d4af37"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Interactive FX Canvas: Starlight + Continuous Love Fireworks (তারকাবাজি) -->
+  <canvas id="fxCanvas"></canvas>
+
+  <!-- ═══════════ REALISTIC CELESTIAL MOON & NIGHT SKY ═══════════ -->
+  <div class="celestial-sky-layer" id="celestialSky" aria-hidden="false">
+    <!-- Wide Atmospheric Sky Floodlight (Illuminating the entire night sky!) -->
+    <div class="moon-sky-flood"></div>
+
+    <!-- Ethereal Nocturnal Cloud Drifting Behind Moon -->
+    <div class="night-cloud night-cloud-back"></div>
+
+    <!-- Realistic Luminous Moon Dedicated to Pollima -->
+    <div class="moon-wrapper" id="celestialMoon" role="button" tabindex="0" aria-label="Pollima, the luminous full moon illuminating my entire sky. Tap for celestial magic!">
+      <!-- Rotating Celestial Moon Beams -->
+      <div class="moon-light-rays"></div>
+
+      <!-- Multi-Layer Atmospheric Corona & Halos -->
+      <div class="moon-aura-outer"></div>
+      <div class="moon-aura-inner"></div>
+
+      <!-- The Radiant Moon Disc with Pollima's Portrait -->
+      <div class="moon-body" id="moonBody">
+        <!-- Pollima's Portrait -->
+        <img src="pollima-moon.jpg" alt="Pollima Sultana - My Shining Moon" class="moon-portrait" id="moonPortrait">
+
+        <!-- Spherical 3D Lunar Limb & Vignette Overlay -->
+        <div class="moon-spherical-overlay"></div>
+
+        <!-- Subtle Translucent Lunar Craters & Maria Ring (Ensures unmistakable Moon identity) -->
+        <svg viewBox="0 0 160 160" class="moon-crater-overlay" aria-hidden="true">
+          <defs>
+            <radialGradient id="craterMaskGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="68%" stop-color="#fff" stop-opacity="0"/>
+              <stop offset="92%" stop-color="#fff" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="0.9"/>
+            </radialGradient>
+          </defs>
+          <!-- Periphery Lunar Craters for authentic moon realism -->
+          <g opacity="0.4" stroke="#fae8a8" stroke-width="0.8" fill="none">
+            <circle cx="28" cy="45" r="5"/>
+            <circle cx="20" cy="75" r="7"/>
+            <circle cx="34" cy="118" r="6"/>
+            <circle cx="132" cy="55" r="6"/>
+            <circle cx="140" cy="85" r="8"/>
+            <circle cx="125" cy="120" r="7"/>
+            <!-- Tycho Rays extending from south -->
+            <line x1="72" y1="150" x2="45" y2="120" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
+            <line x1="72" y1="150" x2="105" y2="125" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
+          </g>
+          <!-- Moon Outer Rim Highlight -->
+          <circle cx="80" cy="80" r="78" stroke="rgba(250, 232, 168, 0.75)" stroke-width="2.5" fill="none"/>
+        </svg>
+
+        <!-- Dynamic Starlight Shimmer Gleam -->
+        <div class="moon-gleam"></div>
+      </div>
+
+      <!-- Floating Poetic Tooltip Badge -->
+      <div class="moon-poetic-badge">
+        <span class="badge-star">✦</span>
+        <span class="badge-text">তুমিই আমার পূর্ণিমার চাঁদ</span>
+        <span class="badge-star">✦</span>
+      </div>
+    </div>
+
+    <!-- Translucent Night Cloud Drifting In Front Of Moon -->
+    <div class="night-cloud night-cloud-front"></div>
+  </div>
+
+  <div class="cosmic-orb orb-1"></div>
+  <div class="cosmic-orb orb-2"></div>
+  <div class="cosmic-orb orb-3"></div>
+  <div id="progress"></div>
+
+  <!-- ═══════════ 1. INTRO ENVELOPE ═══════════ -->
+  <div id="intro">
+    <div class="earphone-pill">
+      <span class="icon">🎧</span> Put your earphones on for the magic
+    </div>
+
+    <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Tap to open your birthday surprise">
+      <div class="envelope-back"></div>
+      <div class="env-card">
+        <div class="for">Especially For</div>
+        <div class="who">Pollima</div>
+        <div class="gold-line" style="margin: 6px auto;"></div>
+        <div class="tagline">Across every single mile to you</div>
+      </div>
+      <div class="env-left"></div>
+      <div class="env-right"></div>
+      <div class="env-bottom"></div>
+      <div class="envelope-flap">
+        <div class="flap-front"><div class="seal">P</div></div>
+        <div class="flap-lining"></div>
+      </div>
+    </div>
+
+    <div class="tap-hint">tap the envelope to unfold</div>
+  </div>
+
+  <!-- ═══════════ MAIN CELEBRATION ═══════════ -->
+  <main id="celebration" class="hidden">
+
+    <!-- 1. Hero Section & Live Countdown -->
+    <section class="hero section">
+      <div class="date-ribbon">September 25 ✦ The Day You Blessed The World</div>
+      <h1 id="hbTitle" aria-label="Happy Birthday"></h1>
+      
+      <div class="name-plate">
+        <span class="gold-line"></span>
+        <span class="hero-name">Pollima Sultana</span>
+        <span class="gold-line"></span>
+      </div>
+
+      <p class="subtitle">
+        Though miles keep our hands apart tonight, not a heartbeat passes where you aren't holding my entire soul.
+      </p>
+
+      <!-- Live Birthday Countdown to September 25 -->
+      <div class="countdown-box" id="countdownBox">
+        <div class="countdown-item">
+          <span class="cd-val" id="cdDays">00</span>
+          <span class="cd-lbl">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="cd-val" id="cdHours">00</span>
+          <span class="cd-lbl">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="cd-val" id="cdMins">00</span>
+          <span class="cd-lbl">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="cd-val" id="cdSecs">00</span>
+          <span class="cd-lbl">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Preview/Test Midnight Surprise Button -->
+      <button class="preview-surprise-btn" onclick="triggerMidnightCelebration()">
+        <span>⚡ Preview Midnight Surprise</span>
+      </button>
+
+      <div class="scroll-hint">
+        <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
+          <path d="M2 2 L12 11 L22 2" stroke="#d4af37" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 2. Long Distance Flight Arc & Radar -->
+    <section class="section reveal">
+      <div class="sec-head">
+        <div class="eyebrow">Connected By Heart</div>
+        <h2 class="sec-title">Miles Apart, Never By Soul</h2>
+        <p class="sec-sub">Physical distance is just a test to see how far true love can travel.</p>
+      </div>
+
+      <div class="ldr-panel">
+        <div class="flight-radar">
+          <!-- Left Node: You -->
+          <div class="flight-node">
+            <div class="node-pin">
+              <div class="sonar-wave"></div>
+              📍
+            </div>
+            <span class="location-title">Where I Am</span>
+            <span class="location-desc">Missing you</span>
+          </div>
+
+          <!-- Connecting Curved Flight Arc SVG -->
+          <svg class="radar-svg-arc" viewBox="0 0 500 120" fill="none">
+            <path id="flightPath" d="M 60 70 Q 250 -20 440 70" stroke="url(#goldStroke)" stroke-width="2" stroke-dasharray="6,6" opacity="0.65"/>
+            <!-- Pulsing Traveler -->
+            <circle r="6" fill="#fdfbf7" filter="drop-shadow(0 0 8px #fae8a8)">
+              <animateMotion dur="3.2s" repeatCount="indefinite">
+                <mpath href="#flightPath"/>
+              </animateMotion>
+            </circle>
+          </svg>
+
+          <!-- Right Node: Her -->
+          <div class="flight-node">
+            <div class="node-pin">
+              <div class="sonar-wave" style="animation-delay: -1.3s;"></div>
+              👑
+            </div>
+            <span class="location-title">Where You Are</span>
+            <span class="location-desc">Pollima's World</span>
+          </div>
+        </div>
+
+        <div class="ldr-stat-pill">
+          <span class="heart-thump">💖</span> Real-time Link: Exactly 0.00 km between our hearts
+        </div>
+
+        <p class="ldr-quote-text">
+          "Whenever the distance feels heavy tonight, look up at the moon — it is the exact same quiet light smiling down upon both of us."
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. PERSONALIZED MEMORIES — WHY I FELL FOR POLLIMA 💖 -->
+    <section class="section reveal">
+      <div class="sec-head">
+        <div class="eyebrow">Pieces Of My Heart</div>
+        <h2 class="sec-title">Why You Are My Everything</h2>
+        <p class="sec-sub">The little things that made me fall for you, and the boundless love that kept me forever yours. Tap each card to uncover my secret heart notes.</p>
+      </div>
+
+      <div class="polaroid-deck">
+        <!-- Card 1: Her Charming Eyes -->
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-front">
+            <div class="washi-tape"></div>
+            <div class="card-specular-glare"></div>
+            <div class="polaroid-media-box photo-frame">
+              <img src="pollima-moon.jpg" alt="Pollima's Charming Eyes" class="card-real-photo eyes-focus">
+              <div class="photo-ambient-vignette"></div>
+              <div class="photo-glow-border"></div>
+              <div class="anim-glint-star glint-top-right">✦</div>
+              <div class="anim-glint-star glint-bottom-left">✨</div>
+            </div>
+            <div class="polaroid-title">Your Charming Eyes</div>
+            <div class="polaroid-sub">যে চোখে আমি প্রথম প্রেম দেখেছিলাম</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-specular-glare"></div>
+            <div class="card-back-quote-tag">✦ The Moment I Fell ✦</div>
+            <p class="card-back-note">
+              "পল্লিমা, তোমার সেই মায়াবী চোখের দিকে যখন প্রথম তাকিয়েছিলাম, তখন থেকেই আমি নিশ্চিত ছিলাম—আমার সমস্ত পৃথিবী এই চোখ দুটোর মাঝেই খুঁজে পেয়েছি। তোমার চোখের এক চিলতে চাহনিতে আমার মন হারিয়ে যায়।"
+            </p>
+            <div class="card-back-heart">✦ 👁️ 💖 ✦</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Her Beautiful Silken Hair -->
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-front">
+            <div class="washi-tape"></div>
+            <div class="card-specular-glare"></div>
+            <div class="polaroid-media-box photo-frame">
+              <img src="pollima-moon.jpg" alt="Pollima's Beautiful Hair & Flower" class="card-real-photo hair-focus">
+              <div class="photo-ambient-vignette"></div>
+              <div class="photo-glow-border"></div>
+              <div class="anim-glint-star glint-top-right">🌸</div>
+              <div class="anim-glint-star glint-bottom-left">✨</div>
+            </div>
+            <div class="polaroid-title">Your Beautiful Hair</div>
+            <div class="polaroid-sub">তোমার একঢাল রেশমি চুল</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-specular-glare"></div>
+            <div class="card-back-quote-tag">✦ Pure Poetry In Motion ✦</div>
+            <p class="card-back-note">
+              "তোমার চুল আমার অসম্ভব প্রিয়। বাতাসে যখন তোমার চুল এলোমেলো হয়ে ওড়ে, কিংবা আনমনে যখন তুমি কানের পেছনে চুল গুঁজিয়ে নাও—আমার কাছে সেই দৃশ্যটা পৃথিবীর সব কবিতার চেয়েও বেশি সুন্দর লাগে।"
+            </p>
+            <div class="card-back-heart">✦ 🌸 ✨ ✦</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Her Cute Anger & Sweet Shashon -->
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-front">
+            <div class="washi-tape"></div>
+            <div class="card-specular-glare"></div>
+            <div class="polaroid-media-box">
+              <svg viewBox="0 0 220 220" class="anim-svg-anger">
+                <rect width="220" height="220" fill="#140f22"/>
+                <path class="anim-anger-heart" d="M 110 155 C 75 130, 50 100, 70 80 C 85 65, 105 78, 110 90 C 115 78, 135 65, 150 80 C 170 100, 145 130, 110 155 Z" fill="#e06287" opacity="0.9"/>
+                <path class="anim-anger-crown" d="M 88 65 L 94 48 L 110 58 L 126 48 L 132 65 Z" fill="url(#goldStroke)"/>
+                <path class="anim-anger-brow brow-l" d="M 60 70 Q 50 60 45 68" stroke="#fae8a8" stroke-width="2.5" fill="none"/>
+                <path class="anim-anger-brow brow-r" d="M 160 70 Q 170 60 175 68" stroke="#fae8a8" stroke-width="2.5" fill="none"/>
+                <circle class="anim-anger-sparkle" cx="110" cy="115" r="4" fill="#fff"/>
+                <circle class="anim-blush blush-l" cx="80" cy="120" r="7" fill="rgba(255,100,150,0.6)"/>
+                <circle class="anim-blush blush-r" cx="140" cy="120" r="7" fill="rgba(255,100,150,0.6)"/>
+              </svg>
+            </div>
+            <div class="polaroid-title">Your Cute Anger & Shashon</div>
+            <div class="polaroid-sub">তোমার মিষ্টি রাগ আর অধিকারের শাসন</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-specular-glare"></div>
+            <div class="card-back-quote-tag">✦ The Sweetest Care ✦</div>
+            <p class="card-back-note">
+              "তুমি যখন রেগে যাও বা কোনো ব্যাপারে ছোট বাচ্চার মতো অধিকার নিয়ে আমাকে শাসন করো, আমার মনে হয় আমি পৃথিবীর সবচেয়ে সৌভাগ্যবান মানুষ। তোমার সেই মিষ্টি রাগের আড়ালেই লুকিয়ে থাকে তোমার অসীম যত্ন আর ভালোবাসা।"
+            </p>
+            <div class="card-back-heart">✦ 👑 💖 ✦</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Never Leaving Me In Bad Times -->
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-front">
+            <div class="washi-tape"></div>
+            <div class="card-specular-glare"></div>
+            <div class="polaroid-media-box">
+              <svg viewBox="0 0 220 220" class="anim-svg-maya">
+                <rect width="220" height="220" fill="#140f22"/>
+                <circle class="anim-maya-ring" cx="110" cy="110" r="55" fill="none" stroke="url(#goldStroke)" stroke-width="2" stroke-dasharray="6,4"/>
+                <path class="anim-maya-ekg" d="M 80 120 Q 95 90 110 110 Q 125 130 140 100" stroke="#fae8a8" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <g class="anim-hands-holding">
+                  <circle class="anim-hand-node hand-l" cx="95" cy="105" r="9" fill="#e06287"/>
+                  <circle class="anim-hand-node hand-r" cx="125" cy="115" r="9" fill="#d4af37"/>
+                </g>
+                <path class="anim-protect-shield" d="M 110 160 C 85 140, 70 120, 85 105 C 95 95, 110 105, 110 112 C 110 105, 125 95, 135 105 C 150 120, 135 140, 110 160 Z" fill="#fcf9f2" opacity="0.35"/>
+              </svg>
+            </div>
+            <div class="polaroid-title">Never Letting Go</div>
+            <div class="polaroid-sub">আমার খারাপ সময়ে তোমার অফুরন্ত মায়া</div>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-specular-glare"></div>
+            <div class="card-back-quote-tag">✦ My Strength & Anchor ✦</div>
+            <p class="card-back-note">
+              "আমার জীবনের সবচেয়ে কঠিন ও খারাপ দিনগুলোতে তুমি যেভাবে আমার হাত শক্ত করে ধরে রেখেছিলে, কোনোদিন ছেড়ে যাওনি—সেই ঋণ আমি এই জীবনে শোধ করতে পারব না। তোমার মায়া আর বিশ্বাসই আমাকে প্রতিবার ঘুরে দাঁড়াতে শিখিয়েছে।"
+            </p>
+            <div class="card-back-heart">✦ 🤝 ❤️ ✦</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Cake & Candle Blowing -->
+    <section class="section reveal" id="cakeSection">
+      <div class="sec-head">
+        <div class="eyebrow">Virtual Wish Ceremony</div>
+        <h2 class="sec-title">Make A Wish & Blow The Candles</h2>
+        <p class="sec-sub">Close your eyes, make the deepest wish in your heart, then tap the candles!</p>
+      </div>
+
+      <svg class="cake-svg" id="cake" viewBox="0 0 280 300" role="button" tabindex="0" aria-label="Birthday cake — tap to blow out candles">
+        <!-- Candles -->
+        <g>
+          <line x1="106" y1="94" x2="106" y2="130" stroke="url(#goldStroke)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="140" y1="94" x2="140" y2="130" stroke="url(#goldStroke)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="174" y1="94" x2="174" y2="130" stroke="url(#goldStroke)" stroke-width="5" stroke-linecap="round"/>
+          <line x1="106" y1="94" x2="106" y2="88" stroke="#b8922e" stroke-width="1.5"/>
+          <line x1="140" y1="94" x2="140" y2="88" stroke="#b8922e" stroke-width="1.5"/>
+          <line x1="174" y1="94" x2="174" y2="88" stroke="#b8922e" stroke-width="1.5"/>
+          <!-- Glowing Flames -->
+          <path class="flame flame-1" d="M106 60 C 100 68, 99 76, 106 88 C 113 76, 112 68, 106 60 Z" fill="url(#flameGrad)"/>
+          <path class="flame flame-2" d="M140 60 C 134 68, 133 76, 140 88 C 147 76, 146 68, 140 60 Z" fill="url(#flameGrad)"/>
+          <path class="flame flame-3" d="M174 60 C 168 68, 167 76, 174 88 C 181 76, 180 68, 174 60 Z" fill="url(#flameGrad)"/>
+          <!-- Smoke particles on blow -->
+          <circle class="smoke" cx="106" cy="74" r="5" fill="#e0dacb"/>
+          <circle class="smoke" cx="140" cy="74" r="5" fill="#e0dacb"/>
+          <circle class="smoke" cx="174" cy="74" r="5" fill="#e0dacb"/>
+        </g>
+        <!-- Top Tier -->
+        <rect x="88" y="130" width="104" height="66" rx="7" fill="rgba(212,175,55,.08)" stroke="url(#goldStroke)" stroke-width="2"/>
+        <path d="M88 138 q13 14 26 0 t26 0 t26 0 t26 0" fill="none" stroke="url(#goldStroke)" stroke-width="2" stroke-linecap="round"/>
+        <!-- Bottom Tier -->
+        <rect x="56" y="196" width="168" height="66" rx="8" fill="rgba(212,175,55,.08)" stroke="url(#goldStroke)" stroke-width="2"/>
+        <path d="M56 204 q10.5 14 21 0 t21 0 t21 0 t21 0 t21 0 t21 0 t21 0 t21 0" fill="none" stroke="url(#goldStroke)" stroke-width="2" stroke-linecap="round"/>
+        <!-- Gold Pearl Accents -->
+        <circle class="cake-pearl" cx="106" cy="238" r="3" fill="#d4af37"/>
+        <circle class="cake-pearl" cx="140" cy="238" r="3" fill="#d4af37"/>
+        <circle class="cake-pearl" cx="174" cy="238" r="3" fill="#d4af37"/>
+        <ellipse cx="140" cy="268" rx="124" ry="12" fill="rgba(212,175,55,.07)" stroke="url(#goldStroke)" stroke-width="2"/>
+      </svg>
+
+      <p class="hint" id="cakeHint" style="margin-top: 24px; font-size: 12px; letter-spacing: .35em; text-transform: uppercase; color: var(--text-muted);">
+        tap the candles to blow them out
+      </p>
+      <div class="wish-banner hidden" id="wishBanner">
+        Your wish is already written across the stars ✦
+      </div>
+      <button class="relight-cake-btn hidden" id="relightCakeBtn" onclick="relightCandles()">
+        <span>🕯️ Relight Candles & Make Another Wish ✨</span>
+      </button>
+    </section>
+
+    <!-- 5. Typewriter Parchment Love Letter -->
+    <section class="section reveal" id="letterSection">
+      <div class="sec-head">
+        <div class="eyebrow">Written In Ink & Heart</div>
+        <h2 class="sec-title">A Letter Across The Miles</h2>
+      </div>
+
+      <div class="parchment">
+        <div class="parchment-seal">P</div>
+        <div class="parchment-greeting">My Dearest Pollima,</div>
+        <p id="typewriter"></p>
+        <div class="letter-sign" id="letterSign">Forever yours, Your Love</div>
+      </div>
+    </section>
+
+    <!-- 6. RE-INVENTED HOLOGRAPHIC VIP LOVE TICKETS & LOVE WALLET -->
+    <section class="section reveal" id="ticketsSection">
+      <div class="sec-head">
+        <div class="eyebrow">When We Finally Meet</div>
+        <h2 class="sec-title">Exclusive Holographic Love Tickets</h2>
+        <p class="sec-sub">Tap any ticket to tear the seal and claim it! Each pass is permanently stored in Pollima's Love Wallet for when we meet.</p>
+      </div>
+
+      <div class="ticket-section-wrap">
+        <!-- Live Love Wallet Progress -->
+        <div class="love-wallet-bar">
+          <span class="wallet-icon">🎟️</span>
+          <span class="wallet-text">Pollima's Love Wallet: <span id="claimedCount">0</span> of 4 Claimed</span>
+          <div class="wallet-stars">
+            <span class="wallet-star" id="star1">★</span>
+            <span class="wallet-star" id="star2">★</span>
+            <span class="wallet-star" id="star3">★</span>
+            <span class="wallet-star" id="star4">★</span>
+          </div>
+        </div>
+
+        <div class="ticket-board">
+          <!-- Ticket 1 -->
+          <div class="holo-ticket" data-id="1" onclick="claimHoloTicket(this)">
+            <div class="notch-left"></div>
+            <div class="notch-right"></div>
+            <div class="holo-stamp">CLAIMED ✓</div>
+            <div class="ticket-top-row">
+              <span class="ticket-number">PASS #001</span>
+              <span class="ticket-seal-badge">Lifetime Valid</span>
+            </div>
+            <h3 class="ticket-heading">One 10-Minute Never-Ending Tight Hug</h3>
+            <p class="ticket-description">Redeemable the exact millisecond we see each other. No letting go allowed, no matter what happens around us.</p>
+            <div class="ticket-interactive-btn">
+              <span>Tap To Claim Ticket ✨</span>
+            </div>
+          </div>
+
+          <!-- Ticket 2 -->
+          <div class="holo-ticket" data-id="2" onclick="claimHoloTicket(this)">
+            <div class="notch-left"></div>
+            <div class="notch-right"></div>
+            <div class="holo-stamp">CLAIMED ✓</div>
+            <div class="ticket-top-row">
+              <span class="ticket-number">PASS #002</span>
+              <span class="ticket-seal-badge">Sweet Date</span>
+            </div>
+            <h3 class="ticket-heading">Midnight Ice Cream & Stargazing Walk</h3>
+            <p class="ticket-description">Walking hand in hand through the quiet city lights under the night sky, enjoying your favorite flavors on me.</p>
+            <div class="ticket-interactive-btn">
+              <span>Tap To Claim Ticket ✨</span>
+            </div>
+          </div>
+
+          <!-- Ticket 3 -->
+          <div class="holo-ticket" data-id="3" onclick="claimHoloTicket(this)">
+            <div class="notch-left"></div>
+            <div class="notch-right"></div>
+            <div class="holo-stamp">CLAIMED ✓</div>
+            <div class="ticket-top-row">
+              <span class="ticket-number">PASS #003</span>
+              <span class="ticket-seal-badge">Queen's Rule</span>
+            </div>
+            <h3 class="ticket-heading">Queen For The Day: You Win Every Argument</h3>
+            <p class="ticket-description">A 24-hour pass where your cute anger, sweet shashon, and every single decision of yours are 100% undisputed law!</p>
+            <div class="ticket-interactive-btn">
+              <span>Tap To Claim Ticket ✨</span>
+            </div>
+          </div>
+
+          <!-- Ticket 4 -->
+          <div class="holo-ticket" data-id="4" onclick="claimHoloTicket(this)">
+            <div class="notch-left"></div>
+            <div class="notch-right"></div>
+            <div class="holo-stamp">CLAIMED ✓</div>
+            <div class="ticket-top-row">
+              <span class="ticket-number">PASS #004</span>
+              <span class="ticket-seal-badge">Forever Pass</span>
+            </div>
+            <h3 class="ticket-heading">Candlelight Dinner & Waking Up Without Goodbyes</h3>
+            <p class="ticket-description">A quiet romantic evening for the two of us, looking forward to the future where we never have to say goodbye again.</p>
+            <div class="ticket-interactive-btn">
+              <span>Tap To Claim Ticket ✨</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Claimed Secret Unlocked Banner -->
+        <div class="all-claimed-banner hidden" id="allClaimedBanner">
+          <div style="font-size:32px; margin-bottom:8px;">👑 💖 ✨</div>
+          <h3 style="font-family:var(--editorial); font-size:24px; color:var(--gold-light); margin-bottom:6px;">
+            All 4 VIP Passes Are Now Sealed In My Heart!
+          </h3>
+          <p style="font-family:var(--editorial); font-style:italic; font-size:16px; color:var(--champagne);">
+            "Every single promise here will be kept the moment I hold you. You are my forever priority, Pollima."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Cosmic Portal: Celestial Sanctuary of Duas & Eternal Blessings -->
+    <section class="section reveal" id="wishesPortalSection">
+      <div class="wishes-portal-card">
+        <div class="portal-halo"></div>
+        <div class="portal-crown">🌌 ✨ 👑</div>
+        <div class="eyebrow" style="margin-bottom: 12px; color: var(--gold-light);">Sacred Birthday Sanctuary</div>
+        <h2 class="portal-heading gold-shimmer">Infinite Prayers & Eternal Blessings</h2>
+        <div style="font-family: var(--editorial); font-size: 19px; color: var(--blush); margin-top: 4px; font-style: italic;">Dedicated Solely To My One & Only Queen 💖</div>
+        <p class="portal-desc">
+          I have created an exclusive celestial sanctuary holding my 7 sacred prayers for your lifetime, an interactive wishing star altar, and my solemn vow to you — my one and only love.
+        </p>
+        <a href="wishes.html" class="portal-action-btn">
+          <span>Enter The Celestial Sanctuary 🌟 →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      Crafted with endless devotion <span class="dot">✦</span> Solely To My One & Only, Pollima <span class="dot">✦</span> September 25
+    </footer>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     MIDNIGHT BIG SURPRISE MODAL (When Countdown Ends / 12:00 AM)
+     ═══════════════════════════════════════════════════════════ -->
+  <div class="midnight-overlay" id="midnightModal">
+    <div class="midnight-card">
+      <div class="midnight-crown">👑</div>
+      <div class="midnight-badge">✦ It Is Officially September 25 ✦</div>
+      <h2 class="midnight-title gold-shimmer">Happy Birthday, My Queen!</h2>
+      <div class="midnight-name">Pollima Sultana 💖</div>
+      <div class="gold-line" style="margin: 10px auto;"></div>
+      <p class="midnight-body">
+        The clock just struck 12:00 AM! Tonight, the stars shine a little brighter and the world celebrates the most precious soul on earth. Even with miles between us, my whole heart is right beside you whispering: I love you more than life itself.
+      </p>
+      <button class="midnight-action-btn" onclick="closeMidnightSurprise()">
+        <span>Blow Your Birthday Candles 🎂✨</span>
+      </button>
+      <div style="margin-top: 16px;">
+        <a href="wishes.html" style="font-family: var(--serif); font-size: 11.5px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--gold-light); text-decoration: none; border-bottom: 1px dashed var(--gold); padding-bottom: 2px;">
+          ✦ Open Eternal Blessings & Duas Sanctuary 🌟 →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab-dock">
+    <button class="fab-pill music-pill" id="musicBtn" title="Toggle Soft Romantic Melody" aria-label="Toggle music">
+      <span class="eq-bars">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </span>
+      <span class="music-pill-label">Melody</span>
+    </button>
+    <button class="fab-pill" id="fireworkBtn" title="Launch Love Fireworks" aria-label="Launch fireworks">✨</button>
+    <button class="fab-pill" id="heartBlastBtn" title="Send Floating Hearts" aria-label="Send hearts">💖</button>
+  </div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   CONFIGURATION & CUSTOM CONTENT (Personalized for Pollima)
+   ═══════════════════════════════════════════════════════════ */
+const HER_NAME      = 'Pollima';
+const HER_FULL_NAME = 'Pollima Sultana';
+const YOUR_NAME     = 'Your Love';
+
+const LOVE_LETTER_TEXT =
+`My Dearest ${HER_NAME},
+
+Today the entire world honors September 25 — the day you arrived on this earth to bring boundless grace, kindness, and light to my life.
+
+Being miles away on your birthday is not easy. How I wish I could walk up to you right now, run my fingers gently through your beautiful hair, look deep into your charming eyes, and whisper how deeply I love you.
+
+I fell in love with your eyes the moment I saw them, and with every passing day, your beauty leaves me speechless. But above all your beauty, it is your soul that owns my heart: your sweet anger, your cute little shashon, and most of all, your unconditional maya. When life was at its hardest and I was going through my worst times, you were the one anchor who never let go of my hand. You gave me strength when I had none.
+
+Happy Birthday, my queen. May this upcoming year grant you all the gentleness, laughter, and joy you so effortlessly give to me. The distance is only temporary, but my devotion to you is eternal.`;
+
+/* ═══════════════════════════════════════════════════════════
+   SOFT ROMANTIC AMBIENT AUDIO ENGINE (Web Audio API)
+   Dreamy piano / Celesta chords with gentle Low-Pass Warmth
+   ═══════════════════════════════════════════════════════════ */
+let audioCtx = null;
+let musicOn = false;
+let musicInterval = null;
+let masterGain = null;
+let lowpassFilter = null;
+
+const ROMANTIC_CHORDS = [
+  [261.63, 329.63, 392.00, 493.88, 587.33], // Cmaj9
+  [220.00, 261.63, 329.63, 392.00, 493.88], // Am9
+  [174.61, 261.63, 329.63, 440.00, 523.25], // Fmaj7
+  [196.00, 293.66, 392.00, 493.88, 659.25]  // G6 / Em7
+];
+
+function initAudio(){
+  if (audioCtx) return;
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  audioCtx = new AudioContextClass();
+
+  masterGain = audioCtx.createGain();
+  masterGain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+  lowpassFilter = audioCtx.createBiquadFilter();
+  lowpassFilter.type = 'lowpass';
+  lowpassFilter.frequency.setValueAtTime(750, audioCtx.currentTime);
+  lowpassFilter.Q.setValueAtTime(0.7, audioCtx.currentTime);
+
+  masterGain.connect(lowpassFilter);
+  lowpassFilter.connect(audioCtx.destination);
+}
+
+function playSoftNote(freq, when, duration = 2.4){
+  if (!audioCtx) return;
+
+  const osc = audioCtx.createOscillator();
+  const subOsc = audioCtx.createOscillator();
+  const noteGain = audioCtx.createGain();
+
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(freq, when);
+
+  subOsc.type = 'triangle';
+  subOsc.frequency.setValueAtTime(freq * 2, when);
+
+  const subGain = audioCtx.createGain();
+  subGain.gain.setValueAtTime(0.07, when);
+
+  noteGain.gain.setValueAtTime(0.0001, when);
+  noteGain.gain.linearRampToValueAtTime(0.45, when + 0.06);
+  noteGain.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+
+  subOsc.connect(subGain);
+  subGain.connect(noteGain);
+  osc.connect(noteGain);
+  noteGain.connect(masterGain);
+
+  osc.start(when);
+  subOsc.start(when);
+  osc.stop(when + duration + 0.1);
+  subOsc.stop(when + duration + 0.1);
+}
+
+let chordIndex = 0;
+let audioBloom = 0;
+function triggerAudioBloom(){
+  audioBloom = 1.0;
+  document.documentElement.style.setProperty('--audio-bloom', '1');
+  setTimeout(() => {
+    document.documentElement.style.setProperty('--audio-bloom', '0');
+  }, 1100);
+}
+
+function playRomanticProgression(){
+  if (!musicOn || !audioCtx) return;
+  const chord = ROMANTIC_CHORDS[chordIndex % ROMANTIC_CHORDS.length];
+  chordIndex++;
+
+  const now = audioCtx.currentTime;
+  chord.forEach((note, i) => {
+    playSoftNote(note, now + i * 0.38, 2.8);
+  });
+
+  triggerAudioBloom();
+
+  if (Math.random() < 0.8) {
+    setTimeout(launchLoveFirework, 250);
+  }
+}
+
+function startMusic(){
+  initAudio();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  musicOn = true;
+  chordIndex = 0;
+  playRomanticProgression();
+  if (musicInterval) clearInterval(musicInterval);
+  musicInterval = setInterval(() => {
+    if (musicOn) playRomanticProgression();
+  }, 2600);
+}
+
+function stopMusic(){
+  musicOn = false;
+  if (musicInterval) { clearInterval(musicInterval); musicInterval = null; }
+}
+
+const musicBtn = document.getElementById('musicBtn');
+musicBtn.addEventListener('click', () => {
+  if (musicOn){
+    stopMusic();
+    musicBtn.classList.remove('active');
+  } else {
+    startMusic();
+    musicBtn.classList.add('active');
+  }
+});
+
+/* ═══════════════════════════════════════════════════════════
+   REALISTIC NIGHT SKY: LIVE STARS, METEORS & LOVE FIREWORKS
+   Multi-depth starfield, diffraction flares, meteors (উল্কাপাত),
+   constellation links, and interactive moon mechanics
+   ═══════════════════════════════════════════════════════════ */
+const fxCanvas = document.getElementById('fxCanvas');
+const ctx = fxCanvas.getContext('2d');
+
+let microStars = [];
+let twinkleStars = [];
+let brightStars = [];
+let constellationLinks = [];
+let meteors = [];
+let fireworks = [];
+let sparks = [];
+let fireflies = [];
+let touchStardust = [];
+
+// 3D Parallax & Gyroscope State (iPhone 11 Sensor Fusion)
+let gyroX = 0, gyroY = 0;
+let targetGyroX = 0, targetGyroY = 0;
+let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+function handleOrientation(e){
+  if (e.gamma !== null && e.beta !== null){
+    targetGyroX = Math.max(-28, Math.min(28, e.gamma)) * 0.9;
+    targetGyroY = Math.max(-28, Math.min(28, e.beta - 45)) * 0.9;
+  }
+}
+
+if (window.DeviceOrientationEvent){
+  if (typeof DeviceOrientationEvent.requestPermission === 'function'){
+    window.requestGyroPermission = function(){
+      DeviceOrientationEvent.requestPermission().then(state => {
+        if (state === 'granted'){
+          window.addEventListener('deviceorientation', handleOrientation, true);
+        }
+      }).catch(() => {});
+    };
+  } else {
+    window.addEventListener('deviceorientation', handleOrientation, true);
+  }
+}
+
+window.addEventListener('pointermove', e => {
+  if (!isMobile){
+    const normX = (e.clientX / window.innerWidth) * 2 - 1;
+    const normY = (e.clientY / window.innerHeight) * 2 - 1;
+    targetGyroX = normX * 22;
+    targetGyroY = normY * 22;
+  }
+  spawnStardust(e.clientX, e.clientY, 1);
+});
+
+window.addEventListener('touchmove', e => {
+  for (let i = 0; i < e.touches.length; i++){
+    spawnStardust(e.touches[i].clientX, e.touches[i].clientY, 2);
+  }
+}, { passive: true });
+
+function spawnStardust(x, y, count = 2){
+  for (let i = 0; i < count; i++){
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 0.5 + Math.random() * 2.2;
+    touchStardust.push({
+      x: x + (Math.random() * 8 - 4),
+      y: y + (Math.random() * 8 - 4),
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 0.4,
+      r: 1.5 + Math.random() * 2.2,
+      alpha: 1.0,
+      decay: 0.018 + Math.random() * 0.015,
+      color: ['#fae8a8', '#ffffff', '#ffd1dc', '#d4af37', '#fcd975'][Math.floor(Math.random() * 5)],
+      sparkle: Math.random() < 0.6,
+      rot: Math.random() * Math.PI,
+      rotSpeed: (Math.random() - 0.5) * 0.1
+    });
+  }
+}
+
+const STAR_SPECTRA = [
+  '#ffffff', '#fffef2', '#fae8a8', '#e8f4fd', '#fce8f0', '#f4e0aa'
+];
+
+function resizeCanvas(){
+  fxCanvas.width = window.innerWidth;
+  fxCanvas.height = window.innerHeight;
+  initStars();
+  initFireflies();
+}
+window.addEventListener('resize', resizeCanvas);
+
+function initFireflies(){
+  fireflies = [];
+  const count = Math.min(22, Math.max(12, Math.floor(window.innerWidth / 40)));
+  for(let i = 0; i < count; i++){
+    fireflies.push({
+      x: Math.random() * fxCanvas.width,
+      y: Math.random() * fxCanvas.height,
+      angle: Math.random() * Math.PI * 2,
+      speed: 0.55 + Math.random() * 0.75,
+      phase: Math.random() * Math.PI * 2,
+      pulseSpeed: 0.022 + Math.random() * 0.02,
+      r: 2.0 + Math.random() * 1.5,
+      glowR: 16 + Math.random() * 12
+    });
+  }
+}
+
+function initStars(){
+  microStars = [];
+  twinkleStars = [];
+  brightStars = [];
+  constellationLinks = [];
+
+  const w = fxCanvas.width;
+  const h = fxCanvas.height;
+
+  // 1. Layer 1: Distant Deep Cosmic Micro Stars (300-500)
+  const microCount = Math.floor((w * h) / 3200);
+  for(let i = 0; i < microCount; i++){
+    microStars.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 0.65 + 0.3,
+      alpha: Math.random() * 0.55 + 0.2,
+      phase: Math.random() * Math.PI * 2,
+      speed: Math.random() * 0.012 + 0.004
+    });
+  }
+
+  // 2. Layer 2: Mid-distance Twinkling Stars (80-140)
+  const midCount = Math.floor((w * h) / 7500);
+  for(let i = 0; i < midCount; i++){
+    twinkleStars.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 0.85 + 0.75,
+      color: STAR_SPECTRA[Math.floor(Math.random() * STAR_SPECTRA.length)],
+      baseAlpha: Math.random() * 0.4 + 0.35,
+      amplitude: Math.random() * 0.35 + 0.25,
+      phase: Math.random() * Math.PI * 2,
+      speed: Math.random() * 0.025 + 0.008
+    });
+  }
+
+  // 3. Layer 3: Prominent Bright Stars with 4-Point Diamond Cross Flares (20-35)
+  const brightCount = Math.max(18, Math.floor((w * h) / 22000));
+  for(let i = 0; i < brightCount; i++){
+    brightStars.push({
+      x: Math.random() * w,
+      y: Math.random() * h * 0.85,
+      r: Math.random() * 1.2 + 1.4,
+      spikeLen: Math.random() * 6 + 5,
+      color: STAR_SPECTRA[Math.floor(Math.random() * STAR_SPECTRA.length)],
+      baseAlpha: Math.random() * 0.3 + 0.65,
+      amplitude: Math.random() * 0.25 + 0.15,
+      phase: Math.random() * Math.PI * 2,
+      speed: Math.random() * 0.03 + 0.01
+    });
+  }
+
+  // 4. Delicate Constellation Lines (including romantic celestial links)
+  if (brightStars.length >= 6) {
+    for(let i = 0; i < brightStars.length - 1; i++){
+      for(let j = i + 1; j < brightStars.length; j++){
+        const dx = brightStars[i].x - brightStars[j].x;
+        const dy = brightStars[i].y - brightStars[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 50 && dist < 140 && Math.random() < 0.35){
+          constellationLinks.push({ s1: brightStars[i], s2: brightStars[j], dist });
+        }
+      }
+    }
+  }
+}
+resizeCanvas();
+
+/* ── Realistic Shooting Stars (Meteors / উল্কাপাত) ── */
+function spawnMeteor(options = {}){
+  const startX = options.x !== undefined ? options.x : (Math.random() * (fxCanvas.width * 0.85) + fxCanvas.width * 0.1);
+  const startY = options.y !== undefined ? options.y : (Math.random() * (fxCanvas.height * 0.3));
+  const angle = options.angle !== undefined ? options.angle : (Math.PI * 0.24 + (Math.random() * 0.16 - 0.08));
+  const speed = options.speed !== undefined ? options.speed : (16 + Math.random() * 8);
+  const length = 110 + Math.random() * 95;
+
+  meteors.push({
+    x: startX,
+    y: startY,
+    vx: Math.cos(angle) * speed,
+    vy: Math.sin(angle) * speed,
+    length: length,
+    size: 2.2 + Math.random() * 1.4,
+    alpha: 1.0,
+    decay: 0.016 + Math.random() * 0.008,
+    color: '#ffffff'
+  });
+}
+
+// Scheduled Natural Meteors across the night sky
+function scheduleMeteorShower(){
+  const interval = 2800 + Math.random() * 3200;
+  setTimeout(() => {
+    if (!document.hidden){
+      spawnMeteor();
+      if (Math.random() < 0.35) {
+        setTimeout(() => spawnMeteor(), 450);
+      }
+    }
+    scheduleMeteorShower();
+  }, interval);
+}
+scheduleMeteorShower();
+
+/* ── Interactive Moon Handlers ── */
+const celestialMoon = document.getElementById('celestialMoon');
+if (celestialMoon) {
+  celestialMoon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Visual ripple wave
+    const ripple = document.createElement('div');
+    ripple.className = 'moon-tap-ripple';
+    celestialMoon.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 950);
+
+    // Audio chime
+    initAudio();
+    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    playSoftNote(1046.50, audioCtx ? audioCtx.currentTime : 0, 2.0); // High C Celesta chime
+    playSoftNote(1318.51, audioCtx ? audioCtx.currentTime + 0.12 : 0.12, 2.4); // E6
+
+    // Spawn 3 rapid shooting stars radiating from the Moon
+    const rect = celestialMoon.getBoundingClientRect();
+    const moonCenterX = rect.left + rect.width / 2;
+    const moonCenterY = rect.top + rect.height / 2;
+
+    for(let i = 0; i < 3; i++){
+      setTimeout(() => {
+        spawnMeteor({
+          x: moonCenterX,
+          y: moonCenterY,
+          angle: Math.PI * 0.32 + (i * 0.16),
+          speed: 18 + i * 3
+        });
+      }, i * 200);
+    }
+
+    // Explode soft golden moon dust
+    for(let i = 0; i < 28; i++){
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 1.5 + Math.random() * 4.5;
+      sparks.push({
+        x: moonCenterX,
+        y: moonCenterY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        color: ['#fffef8', '#fae8a8', '#d4af37', '#f2b8c6'][Math.floor(Math.random() * 4)],
+        alpha: 1,
+        decay: 0.012 + Math.random() * 0.01,
+        size: 2.2 + Math.random() * 2,
+        twinkle: Math.random() * 10,
+        sparkle: true
+      });
+    }
+  });
+}
+
+const FIREWORK_COLORS = [
+  '#fae8a8', '#d4af37', '#f8edcf', '#f2b8c6', '#e06287', '#ffffff', '#ff9bb2'
+];
+
+function launchFirework(targetX, targetY, isHeart = false){
+  const startX = targetX ? targetX + (Math.random() * 60 - 30) : Math.random() * (fxCanvas.width * 0.7) + fxCanvas.width * 0.15;
+  const destX = targetX || (Math.random() * (fxCanvas.width * 0.7) + fxCanvas.width * 0.15);
+  const destY = targetY || (Math.random() * (fxCanvas.height * 0.38) + fxCanvas.height * 0.12);
+
+  fireworks.push({
+    x: startX,
+    y: fxCanvas.height,
+    destX: destX,
+    destY: destY,
+    speed: 6.5 + Math.random() * 3,
+    color: FIREWORK_COLORS[Math.floor(Math.random() * FIREWORK_COLORS.length)],
+    isHeart: isHeart || (Math.random() < 0.55),
+    trail: []
+  });
+}
+
+function launchLoveFirework(){
+  launchFirework(null, null, true);
+}
+
+function explodeFirework(fw){
+  const count = fw.isHeart ? 65 : 75;
+  const color = fw.color;
+
+  if (fw.isHeart){
+    for(let i = 0; i < count; i++){
+      const t = (Math.PI * 2 * i) / count;
+      const hx = 16 * Math.pow(Math.sin(t), 3);
+      const hy = -(13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t));
+      const vel = 0.22 + Math.random() * 0.06;
+
+      sparks.push({
+        x: fw.x,
+        y: fw.y,
+        vx: hx * vel,
+        vy: hy * vel,
+        color: color,
+        alpha: 1,
+        decay: 0.009 + Math.random() * 0.008,
+        size: 2.5 + Math.random() * 2,
+        twinkle: Math.random() * 10,
+        sparkle: true
+      });
+    }
+  } else {
+    for(let i = 0; i < count; i++){
+      const angle = Math.random() * Math.PI * 2;
+      const speed = 2 + Math.random() * 6.5;
+      sparks.push({
+        x: fw.x,
+        y: fw.y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        color: FIREWORK_COLORS[Math.floor(Math.random() * FIREWORK_COLORS.length)],
+        alpha: 1,
+        decay: 0.01 + Math.random() * 0.009,
+        size: 2.2 + Math.random() * 2,
+        twinkle: Math.random() * 10,
+        sparkle: Math.random() < 0.5
+      });
+    }
+  }
+}
+
+window.addEventListener('pointerdown', (e) => {
+  if (e.target.closest('button') || e.target.closest('.flip-card') || e.target.closest('.holo-ticket') || e.target.closest('#envelope') || e.target.closest('#midnightModal') || e.target.closest('#celestialMoon')) return;
+  launchFirework(e.clientX, e.clientY, true);
+});
+
+setInterval(() => {
+  if (!document.hidden){
+    launchLoveFirework();
+  }
+}, 2800);
+
+document.getElementById('fireworkBtn').addEventListener('click', () => {
+  launchFirework(fxCanvas.width * 0.35, fxCanvas.height * 0.25, true);
+  setTimeout(() => launchFirework(fxCanvas.width * 0.65, fxCanvas.height * 0.25, true), 300);
+});
+
+function renderFX(){
+  ctx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+
+  // 1. Smooth 3D Gyroscope & Parallax Physics (iPhone 11 & Pointer)
+  gyroX += (targetGyroX - gyroX) * 0.08;
+  gyroY += (targetGyroY - gyroY) * 0.08;
+
+  document.documentElement.style.setProperty('--moon-parallax-x', `${(gyroX * 1.5).toFixed(2)}px`);
+  document.documentElement.style.setProperty('--moon-parallax-y', `${(gyroY * 1.5).toFixed(2)}px`);
+
+  // Audio-visual bloom decay
+  if (audioBloom > 0.01) {
+    audioBloom *= 0.94;
+  } else {
+    audioBloom = 0;
+  }
+
+  // 2. Draw Micro Stars (Distant Deep Sky — Layer 1 Parallax)
+  const p1X = gyroX * 0.15;
+  const p1Y = gyroY * 0.15;
+  for(let s of microStars){
+    s.phase += s.speed;
+    const a = Math.max(0.12, s.alpha + Math.sin(s.phase) * 0.22);
+    ctx.beginPath();
+    ctx.arc(s.x + p1X, s.y + p1Y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(240, 244, 255, ${a})`;
+    ctx.fill();
+  }
+
+  // 3. Draw Twinkling Mid Stars (Layer 2 Parallax)
+  const p2X = gyroX * 0.42;
+  const p2Y = gyroY * 0.42;
+  for(let s of twinkleStars){
+    s.phase += s.speed;
+    const a = Math.max(0.18, s.baseAlpha + Math.sin(s.phase) * s.amplitude);
+    ctx.beginPath();
+    ctx.arc(s.x + p2X, s.y + p2Y, s.r, 0, Math.PI * 2);
+    ctx.fillStyle = s.color;
+    ctx.globalAlpha = a;
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+
+  // 4. Draw Faint Constellation Links (Layer 3 Parallax)
+  const p3X = gyroX * 0.85;
+  const p3Y = gyroY * 0.85;
+  const linkTime = Date.now() * 0.0015;
+  for(let l of constellationLinks){
+    const pulse = 0.08 + 0.06 * Math.sin(linkTime + l.dist * 0.04) + audioBloom * 0.1;
+    ctx.beginPath();
+    ctx.moveTo(l.s1.x + p3X, l.s1.y + p3Y);
+    ctx.lineTo(l.s2.x + p3X, l.s2.y + p3Y);
+    ctx.strokeStyle = `rgba(212, 175, 55, ${pulse})`;
+    ctx.lineWidth = 0.75;
+    ctx.stroke();
+  }
+
+  // 5. Draw Prominent Bright Stars with 4-Point Diffraction Flare Crosses
+  for(let s of brightStars){
+    s.phase += s.speed;
+    const a = Math.max(0.35, s.baseAlpha + Math.sin(s.phase) * s.amplitude);
+    const spike = s.spikeLen * (0.8 + 0.28 * Math.sin(s.phase)) * (1 + audioBloom * 0.45);
+    const starX = s.x + p3X;
+    const starY = s.y + p3Y;
+
+    ctx.save();
+    ctx.globalAlpha = a;
+
+    // Glowing core
+    ctx.shadowBlur = 8 + audioBloom * 12;
+    ctx.shadowColor = s.color;
+    ctx.beginPath();
+    ctx.arc(starX, starY, s.r * (1 + audioBloom * 0.25), 0, Math.PI * 2);
+    ctx.fillStyle = '#ffffff';
+    ctx.fill();
+
+    // 4-Point diffraction cross
+    ctx.strokeStyle = s.color;
+    ctx.lineWidth = 0.85 + audioBloom * 0.5;
+    ctx.beginPath();
+    ctx.moveTo(starX - spike, starY);
+    ctx.lineTo(starX + spike, starY);
+    ctx.moveTo(starX, starY - spike);
+    ctx.lineTo(starX, starY + spike);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  // 6. Living Bioluminescent Fireflies (জোনাকি পোকা)
+  for(let f of fireflies){
+    f.angle += (Math.random() - 0.5) * 0.15;
+    f.x += Math.cos(f.angle) * f.speed + Math.sin(f.phase) * 0.35 + (gyroX * 0.2);
+    f.y += Math.sin(f.angle) * f.speed - 0.22 + (gyroY * 0.2);
+    f.phase += f.pulseSpeed;
+
+    // Screen wrap
+    if (f.x < -30) f.x = fxCanvas.width + 30;
+    if (f.x > fxCanvas.width + 30) f.x = -30;
+    if (f.y < -30) f.y = fxCanvas.height + 30;
+    if (f.y > fxCanvas.height + 30) f.y = -30;
+
+    const pulse = 0.45 + 0.55 * Math.sin(f.phase);
+    const glowRadius = f.glowR * (0.85 + 0.3 * pulse);
+
+    ctx.save();
+    const auraGrad = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, glowRadius);
+    auraGrad.addColorStop(0, `rgba(250, 232, 168, ${0.45 * pulse})`);
+    auraGrad.addColorStop(0.4, `rgba(224, 185, 80, ${0.18 * pulse})`);
+    auraGrad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+    ctx.fillStyle = auraGrad;
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, glowRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+    ctx.fillStyle = '#ffffff';
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = '#fae8a8';
+    ctx.fill();
+    ctx.restore();
+  }
+
+  // 7. Stardust Touch & Kinetic Finger Trails
+  for(let i = touchStardust.length - 1; i >= 0; i--){
+    let p = touchStardust[i];
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vx *= 0.96;
+    p.vy *= 0.96;
+    p.alpha -= p.decay;
+    p.rot += p.rotSpeed;
+
+    if (p.alpha <= 0){
+      touchStardust.splice(i, 1);
+      continue;
+    }
+
+    ctx.save();
+    ctx.globalAlpha = p.alpha;
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot);
+
+    if (p.sparkle){
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = p.color;
+      const arm = p.r * 2.2;
+      ctx.beginPath();
+      ctx.moveTo(-arm, 0); ctx.lineTo(arm, 0);
+      ctx.moveTo(0, -arm); ctx.lineTo(0, arm);
+      ctx.strokeStyle = p.color;
+      ctx.lineWidth = 1.1;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(0, 0, p.r * 0.6, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    } else {
+      ctx.beginPath();
+      ctx.arc(0, 0, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = p.color;
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  // 8. Draw Shooting Stars (Meteors / উল্কাপাত)
+  for(let i = meteors.length - 1; i >= 0; i--){
+    let m = meteors[i];
+    m.x += m.vx;
+    m.y += m.vy;
+    m.alpha -= m.decay;
+
+    if (m.alpha <= 0 || m.x < -100 || m.x > fxCanvas.width + 100 || m.y > fxCanvas.height + 100){
+      meteors.splice(i, 1);
+      continue;
+    }
+
+    const dist = Math.hypot(m.vx, m.vy) || 1;
+    const tailX = m.x - (m.vx / dist) * m.length;
+    const tailY = m.y - (m.vy / dist) * m.length;
+
+    const grad = ctx.createLinearGradient(m.x, m.y, tailX, tailY);
+    grad.addColorStop(0, `rgba(255, 255, 255, ${m.alpha})`);
+    grad.addColorStop(0.2, `rgba(250, 232, 168, ${m.alpha * 0.85})`);
+    grad.addColorStop(0.65, `rgba(224, 98, 135, ${m.alpha * 0.35})`);
+    grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+
+    ctx.save();
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = m.size;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(m.x, m.y);
+    ctx.lineTo(tailX, tailY);
+    ctx.stroke();
+
+    // Blazing head nucleus
+    ctx.beginPath();
+    ctx.arc(m.x, m.y, m.size * 0.9, 0, Math.PI * 2);
+    ctx.fillStyle = '#ffffff';
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = '#fae8a8';
+    ctx.fill();
+    ctx.restore();
+
+    // Spawn subtle lingering ionization dust
+    if (Math.random() < 0.45){
+      sparks.push({
+        x: m.x + (Math.random() * 4 - 2),
+        y: m.y + (Math.random() * 4 - 2),
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        color: '#fae8a8',
+        alpha: m.alpha * 0.65,
+        decay: 0.03,
+        size: 1.2,
+        twinkle: 0,
+        sparkle: false
+      });
+    }
+  }
+
+  // 9. Draw Fireworks & Sparks
+  for(let i = fireworks.length - 1; i >= 0; i--){
+    let fw = fireworks[i];
+    fw.trail.push({ x: fw.x, y: fw.y, alpha: 0.8 });
+    if (fw.trail.length > 8) fw.trail.shift();
+
+    for(let t of fw.trail){
+      ctx.beginPath();
+      ctx.arc(t.x, t.y, 1.8, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(250, 232, 168, ${t.alpha})`;
+      ctx.fill();
+      t.alpha -= 0.1;
+    }
+
+    const dx = fw.destX - fw.x;
+    const dy = fw.destY - fw.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (dist < fw.speed || fw.y <= fw.destY){
+      explodeFirework(fw);
+      fireworks.splice(i, 1);
+    } else {
+      fw.x += (dx / dist) * fw.speed;
+      fw.y += (dy / dist) * fw.speed;
+    }
+  }
+
+  for(let i = sparks.length - 1; i >= 0; i--){
+    let sp = sparks[i];
+    sp.x += sp.vx;
+    sp.y += sp.vy;
+    sp.vy += 0.055;
+    sp.vx *= 0.985;
+    sp.alpha -= sp.decay;
+    sp.twinkle += 0.2;
+
+    if (sp.alpha <= 0){
+      sparks.splice(i, 1);
+      continue;
+    }
+
+    ctx.save();
+    let currentAlpha = sp.alpha;
+    if (sp.sparkle){
+      currentAlpha *= (0.6 + 0.4 * Math.sin(sp.twinkle));
+    }
+    ctx.globalAlpha = Math.max(0, currentAlpha);
+    ctx.fillStyle = sp.color;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = sp.color;
+
+    ctx.beginPath();
+    ctx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  requestAnimationFrame(renderFX);
+}
+renderFX();
+
+/* ── Live Countdown to September 25 & Midnight Automatic Trigger ── */
+let midnightSurpriseTriggered = false;
+
+function updateCountdown(){
+  const now = new Date();
+  let targetYear = now.getFullYear();
+  let target = new Date(targetYear, 8, 25, 0, 0, 0); // 8 = September
+  if (now > target && (now.getMonth() > 8 || now.getDate() > 25)){
+    target = new Date(targetYear + 1, 8, 25, 0, 0, 0);
+  }
+
+  const diff = target - now;
+  if (diff <= 0){
+    document.getElementById('countdownBox').innerHTML = `
+      <div style="font-family:var(--editorial); font-size:24px; color:var(--gold-light); font-style:italic;">
+        ✦ Today is your special day, my love! ✦
+      </div>
+    `;
+    if (!midnightSurpriseTriggered){
+      midnightSurpriseTriggered = true;
+      triggerMidnightCelebration();
+    }
+    return;
+  }
+
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / 1000 / 60) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  document.getElementById('cdDays').textContent  = String(d).padStart(2, '0');
+  document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+  document.getElementById('cdMins').textContent  = String(m).padStart(2, '0');
+  document.getElementById('cdSecs').textContent  = String(s).padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+/* ═══════════════════════════════════════════════════════════
+   MIDNIGHT BIG SURPRISE CELEBRATION BARRAGE 🎉
+   ═══════════════════════════════════════════════════════════ */
+function triggerMidnightCelebration(){
+  const modal = document.getElementById('midnightModal');
+  modal.classList.add('active');
+
+  for (let i = 0; i < 8; i++){
+    setTimeout(() => {
+      const rx = fxCanvas.width * (0.2 + (i % 4) * 0.2);
+      const ry = fxCanvas.height * (0.18 + Math.random() * 0.25);
+      launchFirework(rx, ry, true);
+    }, i * 280);
+  }
+
+  if (!musicOn){
+    startMusic();
+    musicBtn.classList.add('active');
+  }
+}
+
+function closeMidnightSurprise(){
+  const modal = document.getElementById('midnightModal');
+  modal.classList.remove('active');
+
+  const cakeSection = document.getElementById('cakeSection');
+  if (cakeSection){
+    cakeSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  setTimeout(() => launchFirework(fxCanvas.width * 0.5, fxCanvas.height * 0.3, true), 350);
+}
+
+/* ── Staggered Title Letters ──────────────────────────────── */
+(function buildTitle(){
+  const el = document.getElementById('hbTitle');
+  [...'Happy Birthday'].forEach((ch, i) => {
+    const s = document.createElement('span');
+    if (ch === ' ') { s.className = 'space'; s.innerHTML = '&nbsp;'; }
+    else s.textContent = ch;
+    s.style.animationDelay = (0.12 + i * 0.05) + 's, ' + (1.2 + i * 0.05) + 's';
+    el.appendChild(s);
+  });
+})();
+
+/* ── Pointer Sparkle Trail ────────────────────────────────── */
+let lastTrailTime = 0;
+function spawnTrail(x, y){
+  const now = performance.now();
+  if (now - lastTrailTime < 80) return;
+  lastTrailTime = now;
+  const d = document.createElement('div');
+  d.className = 'trail-spark';
+  d.textContent = ['✦', '✨', '✧', '💖'][Math.floor(Math.random() * 4)];
+  d.style.left = x + 'px';
+  d.style.top = y + 'px';
+  d.style.fontSize = (10 + Math.random() * 7) + 'px';
+  d.addEventListener('animationend', () => d.remove());
+  document.body.appendChild(d);
+}
+window.addEventListener('pointermove', e => spawnTrail(e.clientX, e.clientY));
+
+/* ── Floating Hearts Stream ───────────────────────────────── */
+function releaseFloatingHeart(){
+  const h = document.createElement('div');
+  h.className = 'floating-heart-el';
+  h.textContent = ['💖', '💕', '✨', '🌹', '❤️'][Math.floor(Math.random() * 5)];
+  h.style.left = (Math.random() * 90 + 5) + 'vw';
+  h.style.bottom = '-30px';
+  h.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+  h.addEventListener('animationend', () => h.remove());
+  document.body.appendChild(h);
+}
+
+document.getElementById('heartBlastBtn').addEventListener('click', () => {
+  for(let i = 0; i < 15; i++){
+    setTimeout(releaseFloatingHeart, i * 140);
+  }
+});
+
+/* ── Scroll Progress Indicator ────────────────────────────── */
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  document.getElementById('progress').style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+}, { passive: true });
+
+/* ── 3D Envelope Opening Flow ──────────────────────────────── */
+const intro = document.getElementById('intro');
+const envelope = document.getElementById('envelope');
+const celebration = document.getElementById('celebration');
+let opened = false;
+
+function openSurprise(){
+  if (opened) return;
+  opened = true;
+  envelope.classList.add('open');
+
+  if (window.requestGyroPermission) {
+    window.requestGyroPermission();
+  }
+
+  startMusic();
+  musicBtn.classList.add('active');
+
+  setTimeout(() => launchFirework(window.innerWidth * 0.5, window.innerHeight * 0.3, true), 300);
+  setTimeout(() => launchFirework(window.innerWidth * 0.25, window.innerHeight * 0.35, true), 750);
+  setTimeout(() => launchFirework(window.innerWidth * 0.75, window.innerHeight * 0.35, true), 1200);
+
+  setTimeout(() => {
+    intro.classList.add('fade');
+    celebration.classList.remove('hidden');
+    window.scrollTo(0, 0);
+  }, 1750);
+  setTimeout(() => intro.remove(), 3000);
+}
+envelope.addEventListener('click', openSurprise);
+envelope.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openSurprise(); });
+
+/* ── 3D Flip Cards Interaction ────────────────────────────── */
+function flipCard(card){
+  card.classList.toggle('flipped');
+  const rect = card.getBoundingClientRect();
+  launchFirework(rect.left + rect.width / 2, rect.top + rect.height / 2, true);
+}
+
+/* ── Cake & Candle Ceremony (Blowing & Relighting) ────────── */
+const cake = document.getElementById('cake');
+const cakeHint = document.getElementById('cakeHint');
+const wishBanner = document.getElementById('wishBanner');
+let cakeBlown = false;
+
+function blowCandles(){
+  if (cakeBlown) return;
+  cakeBlown = true;
+  cake.classList.add('blown');
+  cakeHint.textContent = 'closing eyes & wishing…';
+  setTimeout(() => {
+    cakeHint.classList.add('hidden');
+    wishBanner.classList.remove('hidden');
+    const relightBtn = document.getElementById('relightCakeBtn');
+    if (relightBtn) relightBtn.classList.remove('hidden');
+
+    const r = cake.getBoundingClientRect();
+    launchFirework(r.left + r.width / 2, r.top + r.height * 0.22, true);
+    setTimeout(() => launchFirework(window.innerWidth * 0.35, window.innerHeight * 0.3, true), 350);
+    setTimeout(() => launchFirework(window.innerWidth * 0.65, window.innerHeight * 0.3, true), 700);
+  }, 1100);
+}
+cake.addEventListener('click', blowCandles);
+cake.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') blowCandles(); });
+
+function relightCandles(){
+  cakeBlown = false;
+  cake.classList.remove('blown');
+  wishBanner.classList.add('hidden');
+  const relightBtn = document.getElementById('relightCakeBtn');
+  if (relightBtn) relightBtn.classList.add('hidden');
+  cakeHint.classList.remove('hidden');
+  cakeHint.textContent = 'close your eyes & make another wish ✦';
+
+  initAudio();
+  if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+  playSoftNote(523.25, audioCtx ? audioCtx.currentTime : 0, 1.2);
+  playSoftNote(659.25, audioCtx ? audioCtx.currentTime + 0.1 : 0.1, 1.4);
+  playSoftNote(783.99, audioCtx ? audioCtx.currentTime + 0.2 : 0.2, 1.8);
+
+  const r = cake.getBoundingClientRect();
+  for (let i = 0; i < 24; i++){
+    sparks.push({
+      x: r.left + r.width / 2 + (Math.random() * 60 - 30),
+      y: r.top + r.height * 0.25 + (Math.random() * 30 - 15),
+      vx: (Math.random() - 0.5) * 3,
+      vy: -Math.random() * 3,
+      color: '#ffe57f',
+      alpha: 1,
+      decay: 0.02,
+      size: 2.5,
+      twinkle: Math.random() * 10,
+      sparkle: true
+    });
+  }
+}
+
+/* ── Interactive 3D Perspective Tilt on Memory Cards & Tickets ─ */
+function setupCard3DTilt(){
+  const tiltElements = document.querySelectorAll('.flip-card, .holo-ticket');
+  tiltElements.forEach(el => {
+    function handleMove(clientX, clientY){
+      const rect = el.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      const midX = rect.width / 2;
+      const midY = rect.height / 2;
+      const rotY = ((x - midX) / midX) * 11;
+      const rotX = -((y - midY) / midY) * 11;
+
+      if (!el.classList.contains('flipped')){
+        el.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+      }
+      el.style.setProperty('--glare-x', `${x}px`);
+      el.style.setProperty('--glare-y', `${y}px`);
+    }
+
+    el.addEventListener('mousemove', e => handleMove(e.clientX, e.clientY));
+    el.addEventListener('touchmove', e => {
+      if (e.touches && e.touches[0]) handleMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    el.addEventListener('mouseleave', () => {
+      if (!el.classList.contains('flipped')) el.style.transform = '';
+    });
+    el.addEventListener('touchend', () => {
+      if (!el.classList.contains('flipped')) el.style.transform = '';
+    });
+  });
+}
+setupCard3DTilt();
+
+/* ── Typewriter Letter on Scroll ──────────────────────────── */
+const typeEl = document.getElementById('typewriter');
+const signEl = document.getElementById('letterSign');
+let typedLetter = false;
+
+function typewrite(text, speed = 24){
+  let i = 0;
+  typeEl.classList.add('typing');
+  const iv = setInterval(() => {
+    typeEl.textContent = text.slice(0, ++i);
+    if (i >= text.length){
+      clearInterval(iv);
+      typeEl.classList.remove('typing');
+      signEl.classList.add('show');
+    }
+  }, speed);
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    if (entry.target.id === 'letterSection' && !typedLetter){
+      typedLetter = true;
+      setTimeout(() => typewrite(LOVE_LETTER_TEXT), 450);
+    }
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.18 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ═══════════════════════════════════════════════════════════
+   RE-INVENTED HOLOGRAPHIC VIP LOVE TICKETS & WALLET SYSTEM
+   ═══════════════════════════════════════════════════════════ */
+let totalClaimed = 0;
+const claimedIds = new Set();
+
+function claimHoloTicket(ticket){
+  const id = ticket.getAttribute('data-id');
+  if (claimedIds.has(id)) return;
+  claimedIds.add(id);
+
+  ticket.classList.add('claimed');
+  totalClaimed++;
+
+  // Update star and count
+  document.getElementById('claimedCount').textContent = totalClaimed;
+  const star = document.getElementById(`star${id}`);
+  if (star) star.classList.add('active');
+
+  const btnSpan = ticket.querySelector('.ticket-interactive-btn span');
+  if (btnSpan) btnSpan.textContent = 'Saved in Pollima’s Wallet 💖';
+
+  // Explosive Love Firework on the claimed ticket
+  const rect = ticket.getBoundingClientRect();
+  launchFirework(rect.left + rect.width / 2, rect.top + rect.height / 2, true);
+
+  // If all 4 are claimed, trigger Grand Unlock Banner!
+  if (totalClaimed === 4){
+    setTimeout(() => {
+      const banner = document.getElementById('allClaimedBanner');
+      if (banner) banner.classList.remove('hidden');
+
+      // Grand celebration fireworks barrage
+      for (let i = 0; i < 5; i++){
+        setTimeout(() => {
+          launchFirework(fxCanvas.width * (0.2 + i * 0.15), fxCanvas.height * 0.25, true);
+        }, i * 220);
+      }
+    }, 700);
+  }
+}
+</script>
+</body>
+</html>
