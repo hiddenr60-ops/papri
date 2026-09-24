@@ -69,17 +69,19 @@
   }
 
   /* ── Ambient Glowing Cosmic Orbs ──────────────────────────── */
+  /* ── Ambient Glowing Cosmic Orbs (Hardware-Accelerated & Clean Gradients) ── */
   .cosmic-orb {
     position: fixed; border-radius: 50%;
-    filter: blur(140px); pointer-events: none; z-index: 0;
+    pointer-events: none; z-index: 0;
+    will-change: transform;
     animation: orbPulse 22s ease-in-out infinite alternate;
   }
-  .orb-1 { width: 540px; height: 540px; background: radial-gradient(circle, rgba(212,175,55,0.13), transparent 70%); top: -140px; right: -120px; }
-  .orb-2 { width: 480px; height: 480px; background: radial-gradient(circle, rgba(224,98,135,0.12), transparent 70%); bottom: -100px; left: -100px; animation-duration: 26s; animation-delay: -7s; }
-  .orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(184,146,46,0.09), transparent 70%); top: 45%; left: 28%; animation-duration: 20s; }
+  .orb-1 { width: 540px; height: 540px; background: radial-gradient(circle, rgba(212,175,55,0.14) 0%, rgba(212,175,55,0.05) 45%, transparent 70%); top: -140px; right: -120px; }
+  .orb-2 { width: 480px; height: 480px; background: radial-gradient(circle, rgba(224,98,135,0.13) 0%, rgba(224,98,135,0.04) 45%, transparent 70%); bottom: -100px; left: -100px; animation-duration: 26s; animation-delay: -7s; }
+  .orb-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(184,146,46,0.10) 0%, rgba(184,146,46,0.03) 45%, transparent 70%); top: 45%; left: 28%; animation-duration: 20s; }
   @keyframes orbPulse {
     0%   { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-50px, 50px) scale(1.2); }
+    100% { transform: translate(-40px, 40px) scale(1.15); }
   }
 
   /* ═══════════════════════════════════════════════════════════
@@ -89,7 +91,7 @@
   .celestial-sky-layer {
     position: fixed; inset: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
   }
 
@@ -102,15 +104,14 @@
     border-radius: 50%;
     background: radial-gradient(circle at 55% 45%, 
       rgba(255, 248, 220, 0.28) 0%, 
-      rgba(250, 232, 168, 0.20) 24%, 
-      rgba(224, 98, 135, 0.12) 48%, 
-      rgba(150, 110, 210, 0.08) 68%, 
+      rgba(250, 232, 168, 0.18) 28%, 
+      rgba(224, 98, 135, 0.10) 50%, 
+      rgba(150, 110, 210, 0.05) 68%, 
       transparent 85%);
-    filter: blur(65px);
     pointer-events: none;
     z-index: 1;
-    transform: translate3d(calc(var(--moon-parallax-x, 0px) * -0.7), calc(var(--moon-parallax-y, 0px) * -0.7), 0) scale(calc(1 + var(--audio-bloom, 0) * 0.1));
-    transition: transform 0.15s ease-out;
+    will-change: transform;
+    transition: transform 0.08s ease-out;
     animation: skyFloodRadiance 12s ease-in-out infinite alternate;
   }
   @keyframes skyFloodRadiance {
@@ -119,7 +120,7 @@
     100% { opacity: 0.8; }
   }
 
-  /* The Moon Container */
+  /* The Moon Container — Fixed on Top of All Cards */
   .moon-wrapper {
     position: fixed;
     top: calc(20px + env(safe-area-inset-top));
@@ -128,11 +129,11 @@
     height: clamp(90px, 16vw, 126px);
     pointer-events: auto;
     cursor: pointer;
-    z-index: 3;
+    z-index: 80;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
-    transform: translate3d(var(--moon-parallax-x, 0px), var(--moon-parallax-y, 0px), 0) scale(calc(1 + var(--audio-bloom, 0) * 0.05));
-    transition: transform 0.15s ease-out;
+    will-change: transform;
+    transition: transform 0.08s ease-out;
     animation: moonLevitate 14s ease-in-out infinite alternate;
   }
   @keyframes moonLevitate {
@@ -141,64 +142,66 @@
     100% { rotate: 1.2deg; }
   }
 
-  /* Rotating Celestial Moon Beams */
+  /* Rotating Celestial Moon Beams (Hardware-Accelerated 60fps) */
   .moon-light-rays {
     position: absolute; inset: -95%;
     border-radius: 50%;
     background: conic-gradient(
       from 0deg,
       transparent 0deg,
-      rgba(255, 248, 220, 0.22) 18deg,
+      rgba(255, 248, 220, 0.18) 18deg,
       transparent 40deg,
-      rgba(250, 232, 168, 0.25) 60deg,
+      rgba(250, 232, 168, 0.22) 60deg,
       transparent 85deg,
-      rgba(255, 230, 200, 0.18) 110deg,
+      rgba(255, 230, 200, 0.15) 110deg,
       transparent 140deg,
-      rgba(250, 232, 168, 0.22) 165deg,
+      rgba(250, 232, 168, 0.18) 165deg,
       transparent 200deg,
-      rgba(255, 248, 220, 0.20) 225deg,
+      rgba(255, 248, 220, 0.17) 225deg,
       transparent 255deg,
-      rgba(250, 232, 168, 0.24) 285deg,
+      rgba(250, 232, 168, 0.20) 285deg,
       transparent 315deg,
-      rgba(255, 235, 190, 0.16) 340deg,
+      rgba(255, 235, 190, 0.14) 340deg,
       transparent 360deg
     );
-    filter: blur(10px);
     pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
     animation: spinMoonRays 55s linear infinite;
   }
   @keyframes spinMoonRays {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+    from { transform: translateZ(0) rotate(0deg); }
+    to   { transform: translateZ(0) rotate(360deg); }
   }
 
-  /* Multi-Layer Ethereal Lunar Halos */
+  /* Multi-Layer Ethereal Lunar Halos (Smooth Native Gradients) */
   .moon-aura-outer {
     position: absolute; inset: -55%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 245, 215, 0.38) 0%, rgba(250, 232, 168, 0.24) 40%, rgba(224, 98, 135, 0.14) 65%, transparent 80%);
+    background: radial-gradient(circle, rgba(255, 245, 215, 0.32) 0%, rgba(250, 232, 168, 0.18) 35%, rgba(224, 98, 135, 0.08) 60%, transparent 75%);
     pointer-events: none;
-    filter: blur(16px);
-    transform: scale(calc(1 + var(--audio-bloom, 0) * 0.22));
+    will-change: transform, opacity;
+    transform: translateZ(0) scale(calc(1 + var(--audio-bloom, 0) * 0.22));
     transition: transform 0.3s ease-out;
     animation: moonHaloPulse 6.5s ease-in-out infinite alternate;
   }
   @keyframes moonHaloPulse {
-    0%   { transform: scale(0.92); opacity: 0.7; }
-    100% { transform: scale(1.22); opacity: 1; }
+    0%   { transform: translateZ(0) scale(0.92); opacity: 0.7; }
+    100% { transform: translateZ(0) scale(1.22); opacity: 1; }
   }
 
   .moon-aura-inner {
     position: absolute; inset: -20%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 245, 0.65) 0%, rgba(250, 232, 168, 0.35) 50%, transparent 75%);
+    background: radial-gradient(circle, rgba(255, 255, 245, 0.55) 0%, rgba(250, 232, 168, 0.25) 45%, transparent 70%);
     pointer-events: none;
-    filter: blur(8px);
+    will-change: transform, opacity;
+    transform: translateZ(0);
     animation: moonCoronaPulse 4.2s ease-in-out infinite alternate;
   }
   @keyframes moonCoronaPulse {
-    0%   { transform: scale(0.95); opacity: 0.75; }
-    100% { transform: scale(1.12); opacity: 1; }
+    0%   { transform: translateZ(0) scale(0.95); opacity: 0.75; }
+    100% { transform: translateZ(0) scale(1.12); opacity: 1; }
   }
 
   /* The Glowing Moon Disc */
@@ -433,12 +436,23 @@
     gap: 32px; padding: 24px;
     background: radial-gradient(circle at center, rgba(23, 17, 40, 0.75) 0%, rgba(6, 4, 11, 0.88) 90%);
     backdrop-filter: blur(6px);
-    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease;
+    transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), transform 0.65s ease;
   }
   #intro.fade {
     opacity: 0;
-    transform: scale(1.05);
+    transform: scale(1.04);
     pointer-events: none;
+  }
+
+  /* Main Celebration Pre-rendering Container for 60fps Butter Smooth Reveal */
+  #celebration {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  #celebration.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .earphone-pill {
@@ -504,7 +518,7 @@
     box-shadow: 0 20px 48px rgba(0,0,0,0.6);
     text-align: center;
     transform: translate(-50%, -14%);
-    transition: transform 1.2s cubic-bezier(0.2, 0.9, 0.25, 1) 0.4s;
+    transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.25, 1) 0.15s;
     border: 1px solid rgba(212,175,55,0.25);
   }
   .envelope-wrap.open .env-card {
@@ -527,7 +541,7 @@
     position: absolute; top: 0; left: 0; right: 0; height: 126px; z-index: 5;
     transform-origin: top center;
     transform-style: preserve-3d;
-    transition: transform 0.95s cubic-bezier(0.55, 0.05, 0.25, 1), z-index 0s 0.45s;
+    transition: transform 0.5s cubic-bezier(0.55, 0.05, 0.25, 1), z-index 0s 0.25s;
   }
   .envelope-wrap.open .envelope-flap {
     transform: rotateX(180deg);
@@ -1719,6 +1733,127 @@
     box-shadow: 0 0 35px rgba(250,232,168,0.75);
   }
 
+  /* ═══════════════════════════════════════════════════════════
+     GRAND MIDNIGHT BLAST SYSTEM — SHOCKWAVE, HUD & EFFECTS
+     ═══════════════════════════════════════════════════════════ */
+  .midnight-blast-flash {
+    position: fixed; inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 250, 230, 0.95) 0%, rgba(250, 232, 168, 0.75) 45%, rgba(224, 98, 135, 0.4) 75%, transparent 100%);
+    z-index: 240;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease-out;
+  }
+  .midnight-blast-flash.active {
+    opacity: 1;
+  }
+
+  .ten-sec-countdown {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    z-index: 230;
+    pointer-events: none;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    background: rgba(14, 9, 24, 0.94);
+    border: 2px solid var(--gold);
+    border-radius: 32px;
+    padding: 30px 48px;
+    box-shadow: 0 0 70px rgba(212, 175, 55, 0.7), inset 0 0 35px rgba(250, 232, 168, 0.3);
+    backdrop-filter: blur(16px);
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .ten-sec-countdown.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .ten-sec-badge {
+    font-family: var(--serif); font-size: 11px; font-weight: 700;
+    letter-spacing: .3em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 8px;
+  }
+  .ten-sec-number {
+    font-family: var(--serif);
+    font-size: clamp(65px, 15vw, 120px);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffffff 0%, var(--gold-light) 40%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: numberPulse 1s ease infinite;
+  }
+  @keyframes numberPulse {
+    0%   { transform: scale(1.15); opacity: 0.8; }
+    50%  { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.96); opacity: 0.9; }
+  }
+  .ten-sec-label {
+    font-family: var(--editorial); font-size: clamp(14px, 3.5vw, 19px);
+    font-style: italic; color: var(--champagne);
+    letter-spacing: .12em; margin-top: 10px;
+  }
+
+  .blast-confetti {
+    position: fixed; top: -30px;
+    pointer-events: none; z-index: 235;
+    animation: blastConfettiFall 5s linear forwards;
+    will-change: transform;
+  }
+  @keyframes blastConfettiFall {
+    0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+    85%  { opacity: 0.95; }
+    100% { transform: translateY(105vh) rotate(720deg) scale(0.7); opacity: 0; }
+  }
+
+  .intro-countdown-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 20px; border-radius: 30px;
+    background: rgba(22, 14, 38, 0.88);
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.25);
+    color: var(--gold-light);
+    font-family: var(--serif); font-size: 11.5px;
+    letter-spacing: .14em; text-transform: uppercase;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 10px #4ade80;
+    animation: pulseDot 1.4s ease-in-out infinite alternate;
+  }
+  @keyframes pulseDot {
+    from { transform: scale(0.8); opacity: 0.6; }
+    to   { transform: scale(1.3); opacity: 1; }
+  }
+
+  .blast-controls-row {
+    display: flex; gap: 12px; justify-content: center;
+    flex-wrap: wrap; margin-top: 18px;
+  }
+  .test-blast-fab {
+    position: fixed;
+    left: calc(20px + env(safe-area-inset-left));
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    z-index: 70;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 20px; border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.65);
+    background: rgba(18, 14, 28, 0.92);
+    color: var(--gold-light);
+    font-family: var(--serif); font-size: 11px;
+    font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .test-blast-fab:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(250, 232, 168, 0.7);
+  }
+
   /* ── Footer ────────────────────────────────────────────────── */
   footer {
     position: relative; z-index: 2;
@@ -2156,65 +2291,63 @@
     <!-- Wide Atmospheric Sky Floodlight (Illuminating the entire night sky!) -->
     <div class="moon-sky-flood"></div>
 
-    <!-- Ethereal Nocturnal Cloud Drifting Behind Moon -->
+    <!-- Ethereal Nocturnal Cloud Drifting In Night Sky -->
     <div class="night-cloud night-cloud-back"></div>
+    <div class="night-cloud night-cloud-front"></div>
+  </div>
 
-    <!-- Realistic Luminous Moon Dedicated to Pollima -->
-    <div class="moon-wrapper" id="celestialMoon" role="button" tabindex="0" aria-label="Pollima, the luminous full moon illuminating my entire sky. Tap for celestial magic!">
-      <!-- Rotating Celestial Moon Beams -->
-      <div class="moon-light-rays"></div>
+  <!-- Realistic Luminous Moon Dedicated to Pollima (Fixed on top of all cards) -->
+  <div class="moon-wrapper" id="celestialMoon" role="button" tabindex="0" aria-label="Pollima, the luminous full moon illuminating my entire sky. Tap for celestial magic!">
+    <!-- Rotating Celestial Moon Beams -->
+    <div class="moon-light-rays"></div>
 
-      <!-- Multi-Layer Atmospheric Corona & Halos -->
-      <div class="moon-aura-outer"></div>
-      <div class="moon-aura-inner"></div>
+    <!-- Multi-Layer Atmospheric Corona & Halos -->
+    <div class="moon-aura-outer"></div>
+    <div class="moon-aura-inner"></div>
 
-      <!-- The Radiant Moon Disc with Pollima's Portrait -->
-      <div class="moon-body" id="moonBody">
-        <!-- Pollima's Portrait -->
-        <img src="pollima-moon.jpg" alt="Pollima Sultana - My Shining Moon" class="moon-portrait" id="moonPortrait">
+    <!-- The Radiant Moon Disc with Pollima's Portrait -->
+    <div class="moon-body" id="moonBody">
+      <!-- Pollima's Portrait -->
+      <img src="pollima-moon.jpg" alt="Pollima Sultana - My Shining Moon" class="moon-portrait" id="moonPortrait">
 
-        <!-- Spherical 3D Lunar Limb & Vignette Overlay -->
-        <div class="moon-spherical-overlay"></div>
+      <!-- Spherical 3D Lunar Limb & Vignette Overlay -->
+      <div class="moon-spherical-overlay"></div>
 
-        <!-- Subtle Translucent Lunar Craters & Maria Ring (Ensures unmistakable Moon identity) -->
-        <svg viewBox="0 0 160 160" class="moon-crater-overlay" aria-hidden="true">
-          <defs>
-            <radialGradient id="craterMaskGrad" cx="50%" cy="50%" r="50%">
-              <stop offset="68%" stop-color="#fff" stop-opacity="0"/>
-              <stop offset="92%" stop-color="#fff" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#fff" stop-opacity="0.9"/>
-            </radialGradient>
-          </defs>
-          <!-- Periphery Lunar Craters for authentic moon realism -->
-          <g opacity="0.4" stroke="#fae8a8" stroke-width="0.8" fill="none">
-            <circle cx="28" cy="45" r="5"/>
-            <circle cx="20" cy="75" r="7"/>
-            <circle cx="34" cy="118" r="6"/>
-            <circle cx="132" cy="55" r="6"/>
-            <circle cx="140" cy="85" r="8"/>
-            <circle cx="125" cy="120" r="7"/>
-            <!-- Tycho Rays extending from south -->
-            <line x1="72" y1="150" x2="45" y2="120" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
-            <line x1="72" y1="150" x2="105" y2="125" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
-          </g>
-          <!-- Moon Outer Rim Highlight -->
-          <circle cx="80" cy="80" r="78" stroke="rgba(250, 232, 168, 0.75)" stroke-width="2.5" fill="none"/>
-        </svg>
+      <!-- Subtle Translucent Lunar Craters & Maria Ring (Ensures unmistakable Moon identity) -->
+      <svg viewBox="0 0 160 160" class="moon-crater-overlay" aria-hidden="true">
+        <defs>
+          <radialGradient id="craterMaskGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="68%" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="92%" stop-color="#fff" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="0.9"/>
+          </radialGradient>
+        </defs>
+        <!-- Periphery Lunar Craters for authentic moon realism -->
+        <g opacity="0.4" stroke="#fae8a8" stroke-width="0.8" fill="none">
+          <circle cx="28" cy="45" r="5"/>
+          <circle cx="20" cy="75" r="7"/>
+          <circle cx="34" cy="118" r="6"/>
+          <circle cx="132" cy="55" r="6"/>
+          <circle cx="140" cy="85" r="8"/>
+          <circle cx="125" cy="120" r="7"/>
+          <!-- Tycho Rays extending from south -->
+          <line x1="72" y1="150" x2="45" y2="120" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
+          <line x1="72" y1="150" x2="105" y2="125" stroke="#ffffff" stroke-width="0.75" opacity="0.6"/>
+        </g>
+        <!-- Moon Outer Rim Highlight -->
+        <circle cx="80" cy="80" r="78" stroke="rgba(250, 232, 168, 0.75)" stroke-width="2.5" fill="none"/>
+      </svg>
 
-        <!-- Dynamic Starlight Shimmer Gleam -->
-        <div class="moon-gleam"></div>
-      </div>
-
-      <!-- Floating Poetic Tooltip Badge -->
-      <div class="moon-poetic-badge">
-        <span class="badge-star">✦</span>
-        <span class="badge-text">তুমিই আমার পূর্ণিমার চাঁদ</span>
-        <span class="badge-star">✦</span>
-      </div>
+      <!-- Dynamic Starlight Shimmer Gleam -->
+      <div class="moon-gleam"></div>
     </div>
 
-    <!-- Translucent Night Cloud Drifting In Front Of Moon -->
-    <div class="night-cloud night-cloud-front"></div>
+    <!-- Floating Poetic Tooltip Badge -->
+    <div class="moon-poetic-badge">
+      <span class="badge-star">✦</span>
+      <span class="badge-text">তুমিই আমার পূর্ণিমার চাঁদ</span>
+      <span class="badge-star">✦</span>
+    </div>
   </div>
 
   <div class="cosmic-orb orb-1"></div>
@@ -2224,6 +2357,11 @@
 
   <!-- ═══════════ 1. INTRO ENVELOPE ═══════════ -->
   <div id="intro">
+    <div class="intro-countdown-pill" id="introCountdownPill">
+      <span class="pulse-dot"></span>
+      <span id="introCountdownText">Midnight Blast in 00:00:00 ✦ Sept 25</span>
+    </div>
+
     <div class="earphone-pill">
       <span class="icon">🎧</span> Put your earphones on for the magic
     </div>
@@ -2249,7 +2387,7 @@
   </div>
 
   <!-- ═══════════ MAIN CELEBRATION ═══════════ -->
-  <main id="celebration" class="hidden">
+  <main id="celebration">
 
     <!-- 1. Hero Section & Live Countdown -->
     <section class="hero section">
@@ -2286,10 +2424,15 @@
         </div>
       </div>
 
-      <!-- Preview/Test Midnight Surprise Button -->
-      <button class="preview-surprise-btn" onclick="triggerMidnightCelebration()">
-        <span>⚡ Preview Midnight Surprise</span>
-      </button>
+      <!-- Midnight Blast Preview / Test Controls -->
+      <div class="blast-controls-row">
+        <button class="preview-surprise-btn" onclick="triggerMidnightCelebration()" title="Trigger the Grand Midnight Blast now">
+          <span>💥 Test 12:00 AM Blast (টেস্ট ব্লাস্ট)</span>
+        </button>
+        <button class="preview-surprise-btn" style="background: rgba(30, 20, 48, 0.88); border: 1px solid var(--gold);" onclick="testTenSecCountdown()" title="Test final 10s countdown tension">
+          <span>⏱️ Test 10s Countdown</span>
+        </button>
+      </div>
 
       <div class="scroll-hint">
         <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
@@ -2662,26 +2805,49 @@
   <!-- ═══════════════════════════════════════════════════════════
      MIDNIGHT BIG SURPRISE MODAL (When Countdown Ends / 12:00 AM)
      ═══════════════════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════════════════
+     MIDNIGHT BIG SURPRISE MODAL (When Countdown Ends / 12:00 AM)
+     ═══════════════════════════════════════════════════════════ -->
   <div class="midnight-overlay" id="midnightModal">
     <div class="midnight-card">
       <div class="midnight-crown">👑</div>
-      <div class="midnight-badge">✦ It Is Officially September 25 ✦</div>
+      <div class="midnight-badge">✦ It Is Officially 12:00 AM ✦ September 25 ✦</div>
       <h2 class="midnight-title gold-shimmer">Happy Birthday, My Queen!</h2>
       <div class="midnight-name">Pollima Sultana 💖</div>
       <div class="gold-line" style="margin: 10px auto;"></div>
       <p class="midnight-body">
-        The clock just struck 12:00 AM! Tonight, the stars shine a little brighter and the world celebrates the most precious soul on earth. Even with miles between us, my whole heart is right beside you whispering: I love you more than life itself.
+        The clock has officially struck 12:00 AM! Tonight, the entire universe shines in celebration of the most precious soul on earth. Across every single mile between us, my whole heart is right beside you whispering: I love you more than life itself. শুভ জন্মদিন আমার পূর্ণিমা!
       </p>
-      <button class="midnight-action-btn" onclick="closeMidnightSurprise()">
-        <span>Blow Your Birthday Candles 🎂✨</span>
-      </button>
-      <div style="margin-top: 16px;">
+      <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+        <button class="midnight-action-btn" onclick="closeMidnightSurprise()">
+          <span>Blow Your Birthday Candles 🎂✨</span>
+        </button>
+        <button class="midnight-action-btn" style="background: linear-gradient(135deg, rgba(224,98,135,0.92), rgba(184,146,46,0.92)); color:#fff; box-shadow:0 10px 30px rgba(224,98,135,0.4);" onclick="reblastFireworks()">
+          <span>🎆 Replay Midnight Blast (আবার ব্লাস্ট)</span>
+        </button>
+      </div>
+      <div style="margin-top: 18px;">
         <a href="wishes.html" style="font-family: var(--serif); font-size: 11.5px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--gold-light); text-decoration: none; border-bottom: 1px dashed var(--gold); padding-bottom: 2px;">
           ✦ Open Eternal Blessings & Duas Sanctuary 🌟 →
         </a>
       </div>
     </div>
   </div>
+
+  <!-- Full Screen Golden Flash for Midnight Blast -->
+  <div class="midnight-blast-flash" id="blastFlash"></div>
+
+  <!-- 10-Second Live Countdown HUD -->
+  <div class="ten-sec-countdown" id="tenSecHUD">
+    <div class="ten-sec-badge">✦ PREPARING GRAND MIDNIGHT BLAST ✦</div>
+    <div class="ten-sec-number" id="tenSecNum">10</div>
+    <div class="ten-sec-label">Midnight Strikes For Pollima 💖</div>
+  </div>
+
+  <!-- Floating Test Blast Button for quick testing anytime -->
+  <button class="test-blast-fab" onclick="triggerMidnightCelebration()" title="Test 12:00 AM Midnight Blast">
+    <span>💥 Test Blast (রাত ১২টা)</span>
+  </button>
 
   <!-- Floating Action Buttons -->
   <div class="fab-dock">
@@ -2880,6 +3046,20 @@ if (window.DeviceOrientationEvent){
   }
 }
 
+// Pre-rendered Firefly Glow Texture for zero-allocation 60fps rendering
+const fireflyGlowCanvas = document.createElement('canvas');
+fireflyGlowCanvas.width = 64;
+fireflyGlowCanvas.height = 64;
+const fgCtx = fireflyGlowCanvas.getContext('2d');
+const fgGrad = fgCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
+fgGrad.addColorStop(0, 'rgba(250, 232, 168, 0.95)');
+fgGrad.addColorStop(0.35, 'rgba(224, 185, 80, 0.38)');
+fgGrad.addColorStop(0.7, 'rgba(212, 175, 55, 0.08)');
+fgGrad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+fgCtx.fillStyle = fgGrad;
+fgCtx.fillRect(0, 0, 64, 64);
+
+let lastStardustTime = 0;
 window.addEventListener('pointermove', e => {
   if (!isMobile){
     const normX = (e.clientX / window.innerWidth) * 2 - 1;
@@ -2887,31 +3067,38 @@ window.addEventListener('pointermove', e => {
     targetGyroX = normX * 22;
     targetGyroY = normY * 22;
   }
-  spawnStardust(e.clientX, e.clientY, 1);
-});
-
-window.addEventListener('touchmove', e => {
-  for (let i = 0; i < e.touches.length; i++){
-    spawnStardust(e.touches[i].clientX, e.touches[i].clientY, 2);
+  const now = performance.now();
+  if (now - lastStardustTime > 32 && touchStardust.length < 32){
+    lastStardustTime = now;
+    spawnStardust(e.clientX, e.clientY, 1);
   }
 }, { passive: true });
 
-function spawnStardust(x, y, count = 2){
+window.addEventListener('touchmove', e => {
+  const now = performance.now();
+  if (now - lastStardustTime > 40 && touchStardust.length < 32){
+    lastStardustTime = now;
+    if (e.touches.length > 0){
+      spawnStardust(e.touches[0].clientX, e.touches[0].clientY, 1);
+    }
+  }
+}, { passive: true });
+
+function spawnStardust(x, y, count = 1){
   for (let i = 0; i < count; i++){
+    if (touchStardust.length >= 35) touchStardust.shift();
     const angle = Math.random() * Math.PI * 2;
-    const speed = 0.5 + Math.random() * 2.2;
+    const speed = 0.5 + Math.random() * 2.0;
     touchStardust.push({
-      x: x + (Math.random() * 8 - 4),
-      y: y + (Math.random() * 8 - 4),
+      x: x + (Math.random() * 6 - 3),
+      y: y + (Math.random() * 6 - 3),
       vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed - 0.4,
-      r: 1.5 + Math.random() * 2.2,
+      vy: Math.sin(angle) * speed - 0.3,
+      r: 1.4 + Math.random() * 1.8,
       alpha: 1.0,
-      decay: 0.018 + Math.random() * 0.015,
+      decay: 0.022 + Math.random() * 0.015,
       color: ['#fae8a8', '#ffffff', '#ffd1dc', '#d4af37', '#fcd975'][Math.floor(Math.random() * 5)],
-      sparkle: Math.random() < 0.6,
-      rot: Math.random() * Math.PI,
-      rotSpeed: (Math.random() - 0.5) * 0.1
+      sparkle: Math.random() < 0.6
     });
   }
 }
@@ -2930,17 +3117,17 @@ window.addEventListener('resize', resizeCanvas);
 
 function initFireflies(){
   fireflies = [];
-  const count = Math.min(22, Math.max(12, Math.floor(window.innerWidth / 40)));
+  const count = Math.min(18, Math.max(10, Math.floor(window.innerWidth / 48)));
   for(let i = 0; i < count; i++){
     fireflies.push({
       x: Math.random() * fxCanvas.width,
       y: Math.random() * fxCanvas.height,
       angle: Math.random() * Math.PI * 2,
-      speed: 0.55 + Math.random() * 0.75,
+      speed: 0.5 + Math.random() * 0.65,
       phase: Math.random() * Math.PI * 2,
-      pulseSpeed: 0.022 + Math.random() * 0.02,
-      r: 2.0 + Math.random() * 1.5,
-      glowR: 16 + Math.random() * 12
+      pulseSpeed: 0.02 + Math.random() * 0.018,
+      r: 1.8 + Math.random() * 1.2,
+      glowR: 15 + Math.random() * 10
     });
   }
 }
@@ -2954,8 +3141,8 @@ function initStars(){
   const w = fxCanvas.width;
   const h = fxCanvas.height;
 
-  // 1. Layer 1: Distant Deep Cosmic Micro Stars (300-500)
-  const microCount = Math.floor((w * h) / 3200);
+  // 1. Layer 1: Distant Deep Cosmic Micro Stars
+  const microCount = Math.min(160, Math.floor((w * h) / 7500));
   for(let i = 0; i < microCount; i++){
     microStars.push({
       x: Math.random() * w,
@@ -2967,8 +3154,8 @@ function initStars(){
     });
   }
 
-  // 2. Layer 2: Mid-distance Twinkling Stars (80-140)
-  const midCount = Math.floor((w * h) / 7500);
+  // 2. Layer 2: Mid-distance Twinkling Stars
+  const midCount = Math.min(50, Math.floor((w * h) / 18000));
   for(let i = 0; i < midCount; i++){
     twinkleStars.push({
       x: Math.random() * w,
@@ -2982,8 +3169,8 @@ function initStars(){
     });
   }
 
-  // 3. Layer 3: Prominent Bright Stars with 4-Point Diamond Cross Flares (20-35)
-  const brightCount = Math.max(18, Math.floor((w * h) / 22000));
+  // 3. Layer 3: Prominent Bright Stars with 4-Point Diamond Cross Flares
+  const brightCount = Math.min(14, Math.max(8, Math.floor((w * h) / 50000)));
   for(let i = 0; i < brightCount; i++){
     brightStars.push({
       x: Math.random() * w,
@@ -3178,25 +3365,33 @@ window.addEventListener('pointerdown', (e) => {
 });
 
 setInterval(() => {
-  if (!document.hidden){
+  if (!document.hidden && opened){
     launchLoveFirework();
   }
-}, 2800);
+}, 4500);
 
 document.getElementById('fireworkBtn').addEventListener('click', () => {
   launchFirework(fxCanvas.width * 0.35, fxCanvas.height * 0.25, true);
   setTimeout(() => launchFirework(fxCanvas.width * 0.65, fxCanvas.height * 0.25, true), 300);
 });
 
+// Cache elements to prevent DOM queries inside 60fps render loop
+const cachedMoonEl = document.querySelector('.moon-wrapper');
+const cachedFloodEl = document.querySelector('.moon-sky-flood');
+
 function renderFX(){
   ctx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
 
-  // 1. Smooth 3D Gyroscope & Parallax Physics (iPhone 11 & Pointer)
+  // 1. Smooth 3D Gyroscope & Parallax Physics (Direct element transforms - zero root style invalidation)
   gyroX += (targetGyroX - gyroX) * 0.08;
   gyroY += (targetGyroY - gyroY) * 0.08;
 
-  document.documentElement.style.setProperty('--moon-parallax-x', `${(gyroX * 1.5).toFixed(2)}px`);
-  document.documentElement.style.setProperty('--moon-parallax-y', `${(gyroY * 1.5).toFixed(2)}px`);
+  if (cachedMoonEl){
+    cachedMoonEl.style.transform = `translate3d(${(gyroX * 1.5).toFixed(1)}px, ${(gyroY * 1.5).toFixed(1)}px, 0)`;
+  }
+  if (cachedFloodEl){
+    cachedFloodEl.style.transform = `translate3d(${(gyroX * -1.05).toFixed(1)}px, ${(gyroY * -1.05).toFixed(1)}px, 0)`;
+  }
 
   // Audio-visual bloom decay
   if (audioBloom > 0.01) {
@@ -3245,7 +3440,7 @@ function renderFX(){
     ctx.stroke();
   }
 
-  // 5. Draw Prominent Bright Stars with 4-Point Diffraction Flare Crosses
+  // 5. Draw Prominent Bright Stars with 4-Point Diffraction Flare Crosses (Zero CPU shadowBlur)
   for(let s of brightStars){
     s.phase += s.speed;
     const a = Math.max(0.35, s.baseAlpha + Math.sin(s.phase) * s.amplitude);
@@ -3253,15 +3448,17 @@ function renderFX(){
     const starX = s.x + p3X;
     const starY = s.y + p3Y;
 
-    ctx.save();
-    ctx.globalAlpha = a;
-
-    // Glowing core
-    ctx.shadowBlur = 8 + audioBloom * 12;
-    ctx.shadowColor = s.color;
+    // Glowing core halo without slow CPU shadowBlur
     ctx.beginPath();
-    ctx.arc(starX, starY, s.r * (1 + audioBloom * 0.25), 0, Math.PI * 2);
+    ctx.arc(starX, starY, (s.r * 2.8) * (1 + audioBloom * 0.25), 0, Math.PI * 2);
+    ctx.fillStyle = s.color;
+    ctx.globalAlpha = a * 0.28;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(starX, starY, s.r * (1 + audioBloom * 0.2), 0, Math.PI * 2);
     ctx.fillStyle = '#ffffff';
+    ctx.globalAlpha = a;
     ctx.fill();
 
     // 4-Point diffraction cross
@@ -3273,10 +3470,10 @@ function renderFX(){
     ctx.moveTo(starX, starY - spike);
     ctx.lineTo(starX, starY + spike);
     ctx.stroke();
-    ctx.restore();
   }
+  ctx.globalAlpha = 1;
 
-  // 6. Living Bioluminescent Fireflies (জোনাকি পোকা)
+  // 6. Living Bioluminescent Fireflies (Fast Pre-rendered Sprite Blit)
   for(let f of fireflies){
     f.angle += (Math.random() - 0.5) * 0.15;
     f.x += Math.cos(f.angle) * f.speed + Math.sin(f.phase) * 0.35 + (gyroX * 0.2);
@@ -3290,28 +3487,20 @@ function renderFX(){
     if (f.y > fxCanvas.height + 30) f.y = -30;
 
     const pulse = 0.45 + 0.55 * Math.sin(f.phase);
-    const glowRadius = f.glowR * (0.85 + 0.3 * pulse);
+    const glowSize = f.glowR * 2 * (0.85 + 0.3 * pulse);
 
-    ctx.save();
-    const auraGrad = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, glowRadius);
-    auraGrad.addColorStop(0, `rgba(250, 232, 168, ${0.45 * pulse})`);
-    auraGrad.addColorStop(0.4, `rgba(224, 185, 80, ${0.18 * pulse})`);
-    auraGrad.addColorStop(1, 'rgba(212, 175, 55, 0)');
-    ctx.fillStyle = auraGrad;
-    ctx.beginPath();
-    ctx.arc(f.x, f.y, glowRadius, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.globalAlpha = pulse * 0.65;
+    ctx.drawImage(fireflyGlowCanvas, f.x - glowSize/2, f.y - glowSize/2, glowSize, glowSize);
 
     ctx.beginPath();
     ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
     ctx.fillStyle = '#ffffff';
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = '#fae8a8';
+    ctx.globalAlpha = 0.95;
     ctx.fill();
-    ctx.restore();
   }
+  ctx.globalAlpha = 1;
 
-  // 7. Stardust Touch & Kinetic Finger Trails
+  // 7. Stardust Touch & Kinetic Finger Trails (Hardware Blit)
   for(let i = touchStardust.length - 1; i >= 0; i--){
     let p = touchStardust[i];
     p.x += p.vx;
@@ -3319,44 +3508,34 @@ function renderFX(){
     p.vx *= 0.96;
     p.vy *= 0.96;
     p.alpha -= p.decay;
-    p.rot += p.rotSpeed;
 
     if (p.alpha <= 0){
       touchStardust.splice(i, 1);
       continue;
     }
 
-    ctx.save();
     ctx.globalAlpha = p.alpha;
-    ctx.translate(p.x, p.y);
-    ctx.rotate(p.rot);
-
     if (p.sparkle){
-      ctx.fillStyle = p.color;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = p.color;
-      const arm = p.r * 2.2;
-      ctx.beginPath();
-      ctx.moveTo(-arm, 0); ctx.lineTo(arm, 0);
-      ctx.moveTo(0, -arm); ctx.lineTo(0, arm);
       ctx.strokeStyle = p.color;
       ctx.lineWidth = 1.1;
+      const arm = p.r * 2.0;
+      ctx.beginPath();
+      ctx.moveTo(p.x - arm, p.y); ctx.lineTo(p.x + arm, p.y);
+      ctx.moveTo(p.x, p.y - arm); ctx.lineTo(p.x, p.y + arm);
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.arc(0, 0, p.r * 0.6, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, p.r * 0.7, 0, Math.PI * 2);
       ctx.fillStyle = '#ffffff';
       ctx.fill();
     } else {
       ctx.beginPath();
-      ctx.arc(0, 0, p.r, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fillStyle = p.color;
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = p.color;
       ctx.fill();
     }
-    ctx.restore();
   }
+  ctx.globalAlpha = 1;
 
   // 8. Draw Shooting Stars (Meteors / উল্কাপাত)
   for(let i = meteors.length - 1; i >= 0; i--){
@@ -3380,7 +3559,6 @@ function renderFX(){
     grad.addColorStop(0.65, `rgba(224, 98, 135, ${m.alpha * 0.35})`);
     grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
 
-    ctx.save();
     ctx.strokeStyle = grad;
     ctx.lineWidth = m.size;
     ctx.lineCap = 'round';
@@ -3389,17 +3567,19 @@ function renderFX(){
     ctx.lineTo(tailX, tailY);
     ctx.stroke();
 
-    // Blazing head nucleus
+    // Blazing head nucleus + soft halo
+    ctx.beginPath();
+    ctx.arc(m.x, m.y, m.size * 2.2, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(250, 232, 168, 0.35)';
+    ctx.fill();
+
     ctx.beginPath();
     ctx.arc(m.x, m.y, m.size * 0.9, 0, Math.PI * 2);
     ctx.fillStyle = '#ffffff';
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = '#fae8a8';
     ctx.fill();
-    ctx.restore();
 
-    // Spawn subtle lingering ionization dust
-    if (Math.random() < 0.45){
+    // Subtle ionization dust (capped)
+    if (Math.random() < 0.35 && sparks.length < 350){
       sparks.push({
         x: m.x + (Math.random() * 4 - 2),
         y: m.y + (Math.random() * 4 - 2),
@@ -3407,7 +3587,7 @@ function renderFX(){
         vy: (Math.random() - 0.5) * 0.5,
         color: '#fae8a8',
         alpha: m.alpha * 0.65,
-        decay: 0.03,
+        decay: 0.035,
         size: 1.2,
         twinkle: 0,
         sparkle: false
@@ -3419,14 +3599,14 @@ function renderFX(){
   for(let i = fireworks.length - 1; i >= 0; i--){
     let fw = fireworks[i];
     fw.trail.push({ x: fw.x, y: fw.y, alpha: 0.8 });
-    if (fw.trail.length > 8) fw.trail.shift();
+    if (fw.trail.length > 7) fw.trail.shift();
 
     for(let t of fw.trail){
       ctx.beginPath();
       ctx.arc(t.x, t.y, 1.8, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(250, 232, 168, ${t.alpha})`;
       ctx.fill();
-      t.alpha -= 0.1;
+      t.alpha -= 0.12;
     }
 
     const dx = fw.destX - fw.x;
@@ -3440,6 +3620,11 @@ function renderFX(){
       fw.x += (dx / dist) * fw.speed;
       fw.y += (dy / dist) * fw.speed;
     }
+  }
+
+  // Cap maximum sparks to 380 to guarantee 60fps even under heavy barrages
+  if (sparks.length > 380){
+    sparks.splice(0, sparks.length - 380);
   }
 
   for(let i = sparks.length - 1; i >= 0; i--){
@@ -3456,44 +3641,249 @@ function renderFX(){
       continue;
     }
 
-    ctx.save();
     let currentAlpha = sp.alpha;
     if (sp.sparkle){
       currentAlpha *= (0.6 + 0.4 * Math.sin(sp.twinkle));
     }
     ctx.globalAlpha = Math.max(0, currentAlpha);
     ctx.fillStyle = sp.color;
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = sp.color;
-
     ctx.beginPath();
     ctx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
     ctx.fill();
-    ctx.restore();
   }
+  ctx.globalAlpha = 1;
 
   requestAnimationFrame(renderFX);
 }
 renderFX();
 
-/* ── Live Countdown to September 25 & Midnight Automatic Trigger ── */
+/* ═══════════════════════════════════════════════════════════
+   GRAND MIDNIGHT BLAST AUDIO & EFFECT ENGINE (12:00 AM BLAST)
+   ═══════════════════════════════════════════════════════════ */
 let midnightSurpriseTriggered = false;
 
+function playMidnightFanfare(){
+  try {
+    initAudio();
+    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    if (!audioCtx) return;
+
+    const notes = [
+      { f: 523.25, when: 0.00, dur: 0.35 },  // C5
+      { f: 659.25, when: 0.18, dur: 0.35 },  // E5
+      { f: 783.99, when: 0.36, dur: 0.40 },  // G5
+      { f: 1046.50, when: 0.55, dur: 0.85 }, // C6
+      { f: 880.00, when: 0.90, dur: 0.35 },  // A5
+      { f: 1046.50, when: 1.10, dur: 0.35 }, // C6
+      { f: 1174.66, when: 1.30, dur: 0.50 }, // D6
+      { f: 1318.51, when: 1.60, dur: 1.80 }  // E6 triumphant chord!
+    ];
+    const baseTime = audioCtx.currentTime;
+    notes.forEach(n => {
+      playSoftNote(n.f, baseTime + n.when, n.dur);
+    });
+  } catch(e){}
+}
+
+function triggerFlashShockwave(){
+  const flash = document.getElementById('blastFlash');
+  if (flash){
+    flash.classList.add('active');
+    setTimeout(() => flash.classList.remove('active'), 650);
+  }
+}
+
+function triggerConfettiShower(){
+  const symbols = ['✨', '💖', '👑', '🎉', '✦', '🌹', '💕', '⭐'];
+  for (let i = 0; i < 45; i++){
+    setTimeout(() => {
+      const conf = document.createElement('div');
+      conf.className = 'blast-confetti';
+      conf.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      conf.style.left = (Math.random() * 94 + 3) + 'vw';
+      conf.style.animationDuration = (3.5 + Math.random() * 3) + 's';
+      conf.style.fontSize = (16 + Math.random() * 16) + 'px';
+      conf.style.filter = `drop-shadow(0 0 6px ${['#fae8a8', '#ffd1dc', '#d4af37'][Math.floor(Math.random()*3)]})`;
+      document.body.appendChild(conf);
+      setTimeout(() => conf.remove(), 7000);
+    }, i * 90);
+  }
+}
+
+function triggerGrandBarrage(){
+  const w = fxCanvas.width;
+  const h = fxCanvas.height;
+
+  // Wave 1: Instant opening burst (0s - 2s)
+  launchFirework(w * 0.5, h * 0.22, true);
+  setTimeout(() => launchFirework(w * 0.3, h * 0.28, true), 250);
+  setTimeout(() => launchFirework(w * 0.7, h * 0.28, true), 500);
+
+  // Wave 2: Dynamic cross-sky explosions (2s - 5s)
+  for (let i = 0; i < 8; i++){
+    setTimeout(() => {
+      const rx = w * (0.15 + Math.random() * 0.7);
+      const ry = h * (0.15 + Math.random() * 0.28);
+      launchFirework(rx, ry, i % 2 === 0);
+    }, 1200 + i * 400);
+  }
+
+  // Wave 3: Cascade of love heart fireworks (5s - 9s)
+  for (let i = 0; i < 8; i++){
+    setTimeout(() => {
+      const rx = w * (0.2 + (i % 4) * 0.2);
+      const ry = h * (0.16 + (i % 2) * 0.12);
+      launchFirework(rx, ry, true);
+      releaseFloatingHeart();
+    }, 4500 + i * 450);
+  }
+
+  // Wave 4: Grand finale barrage (9s - 12s)
+  setTimeout(() => {
+    for (let j = 0; j < 6; j++){
+      setTimeout(() => {
+        launchFirework(w * (0.2 + j * 0.12), h * (0.2 + (j % 2) * 0.08), true);
+      }, j * 200);
+    }
+  }, 8500);
+}
+
+function showTenSecCountdown(remainingSecs){
+  const el = document.getElementById('tenSecHUD');
+  if (el){
+    el.classList.add('active');
+    const numEl = document.getElementById('tenSecNum');
+    if (numEl) numEl.textContent = remainingSecs;
+  }
+  if (audioCtx){
+    try {
+      playSoftNote(800 + (10 - remainingSecs) * 45, audioCtx.currentTime, 0.12);
+    } catch(e){}
+  }
+}
+
+function hideTenSecCountdown(){
+  const el = document.getElementById('tenSecHUD');
+  if (el) el.classList.remove('active');
+}
+
+function testTenSecCountdown(){
+  let count = 10;
+  showTenSecCountdown(count);
+  const iv = setInterval(() => {
+    count--;
+    if (count > 0){
+      showTenSecCountdown(count);
+    } else {
+      clearInterval(iv);
+      hideTenSecCountdown();
+      triggerMidnightCelebration();
+    }
+  }, 1000);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MIDNIGHT BIG SURPRISE CELEBRATION BARRAGE 🎉
+   ═══════════════════════════════════════════════════════════ */
+function triggerMidnightCelebration(){
+  midnightSurpriseTriggered = true;
+  hideTenSecCountdown();
+
+  // 1. Full-screen Starlight Flash Shockwave
+  triggerFlashShockwave();
+
+  // 2. Audio Fanfare & Romantic Melody
+  playMidnightFanfare();
+  if (!musicOn){
+    startMusic();
+    musicBtn.classList.add('active');
+  }
+
+  // 3. Grand Multi-Wave Fireworks Barrage (12s show)
+  triggerGrandBarrage();
+
+  // 4. Confetti & Stardust Shower
+  triggerConfettiShower();
+
+  // 5. If intro envelope is still up, automatically reveal celebration smoothly!
+  if (!opened){
+    openSurprise();
+  }
+
+  // 6. Show the Midnight Modal with celebration message
+  setTimeout(() => {
+    const modal = document.getElementById('midnightModal');
+    if (modal) modal.classList.add('active');
+  }, 750);
+}
+
+function reblastFireworks(){
+  triggerFlashShockwave();
+  playMidnightFanfare();
+  triggerGrandBarrage();
+  triggerConfettiShower();
+}
+
+function closeMidnightSurprise(){
+  const modal = document.getElementById('midnightModal');
+  if (modal) modal.classList.remove('active');
+
+  if (!opened){
+    openSurprise();
+  }
+
+  const cakeSection = document.getElementById('cakeSection');
+  if (cakeSection){
+    setTimeout(() => {
+      cakeSection.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
+  }
+
+  setTimeout(() => launchFirework(fxCanvas.width * 0.5, fxCanvas.height * 0.3, true), 350);
+}
+
+/* ── Live Countdown to September 25 & Midnight Automatic Trigger ── */
 function updateCountdown(){
   const now = new Date();
   let targetYear = now.getFullYear();
-  let target = new Date(targetYear, 8, 25, 0, 0, 0); // 8 = September
-  if (now > target && (now.getMonth() > 8 || now.getDate() > 25)){
+  let target = new Date(targetYear, 8, 25, 0, 0, 0); // 8 = September, 25 = 25th, 0:0:0 = Midnight
+
+  // If we are past September 25 23:59:59, next target is next year
+  if (now.getMonth() > 8 || (now.getMonth() === 8 && now.getDate() > 25)){
     target = new Date(targetYear + 1, 8, 25, 0, 0, 0);
   }
 
   const diff = target - now;
-  if (diff <= 0){
-    document.getElementById('countdownBox').innerHTML = `
-      <div style="font-family:var(--editorial); font-size:24px; color:var(--gold-light); font-style:italic;">
-        ✦ Today is your special day, my love! ✦
-      </div>
-    `;
+
+  // Check if today is September 25 (00:00:00 to 23:59:59)
+  const isBirthdayToday = (now.getMonth() === 8 && now.getDate() === 25);
+
+  if (diff <= 0 || isBirthdayToday){
+    const cdBox = document.getElementById('countdownBox');
+    if (cdBox && !cdBox.classList.contains('blast-unlocked')){
+      cdBox.classList.add('blast-unlocked');
+      cdBox.innerHTML = `
+        <div style="text-align:center; padding: 14px 10px;">
+          <div style="font-family:var(--serif); font-size:12px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold-light); margin-bottom:6px;">
+            ✦ IT IS OFFICIALLY SEPTEMBER 25 ✦
+          </div>
+          <div style="font-family:var(--editorial); font-size:clamp(20px, 4.5vw, 28px); color:var(--ivory); font-style:italic;">
+            Happy Birthday, My Queen Pollima! 💖
+          </div>
+          <div style="display:flex; justify-content:center; gap:10px; margin-top:14px; flex-wrap:wrap;">
+            <button class="preview-surprise-btn" onclick="triggerMidnightCelebration()">
+              <span>🎆 Launch Midnight Blast Barrage 💥</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    const introPill = document.getElementById('introCountdownPill');
+    if (introPill){
+      introPill.innerHTML = `<span class="pulse-dot"></span><span>🎉 Today is Pollima's Birthday! 💖</span>`;
+    }
+
     if (!midnightSurpriseTriggered){
       midnightSurpriseTriggered = true;
       triggerMidnightCelebration();
@@ -3501,51 +3891,36 @@ function updateCountdown(){
     return;
   }
 
+  // Active Countdown (< 10 seconds check)
+  const totalSecsRemaining = Math.floor(diff / 1000);
+  if (totalSecsRemaining <= 10 && totalSecsRemaining >= 1){
+    showTenSecCountdown(totalSecsRemaining);
+  } else if (totalSecsRemaining <= 0){
+    hideTenSecCountdown();
+  }
+
   const d = Math.floor(diff / (1000 * 60 * 60 * 24));
   const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const m = Math.floor((diff / 1000 / 60) % 60);
   const s = Math.floor((diff / 1000) % 60);
 
-  document.getElementById('cdDays').textContent  = String(d).padStart(2, '0');
-  document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
-  document.getElementById('cdMins').textContent  = String(m).padStart(2, '0');
-  document.getElementById('cdSecs').textContent  = String(s).padStart(2, '0');
+  const cdDays = document.getElementById('cdDays');
+  const cdHours = document.getElementById('cdHours');
+  const cdMins = document.getElementById('cdMins');
+  const cdSecs = document.getElementById('cdSecs');
+
+  if (cdDays) cdDays.textContent  = String(d).padStart(2, '0');
+  if (cdHours) cdHours.textContent = String(h).padStart(2, '0');
+  if (cdMins) cdMins.textContent  = String(m).padStart(2, '0');
+  if (cdSecs) cdSecs.textContent  = String(s).padStart(2, '0');
+
+  const introText = document.getElementById('introCountdownText');
+  if (introText){
+    introText.textContent = `Midnight Blast in ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')} ✦ Sept 25`;
+  }
 }
 setInterval(updateCountdown, 1000);
 updateCountdown();
-
-/* ═══════════════════════════════════════════════════════════
-   MIDNIGHT BIG SURPRISE CELEBRATION BARRAGE 🎉
-   ═══════════════════════════════════════════════════════════ */
-function triggerMidnightCelebration(){
-  const modal = document.getElementById('midnightModal');
-  modal.classList.add('active');
-
-  for (let i = 0; i < 8; i++){
-    setTimeout(() => {
-      const rx = fxCanvas.width * (0.2 + (i % 4) * 0.2);
-      const ry = fxCanvas.height * (0.18 + Math.random() * 0.25);
-      launchFirework(rx, ry, true);
-    }, i * 280);
-  }
-
-  if (!musicOn){
-    startMusic();
-    musicBtn.classList.add('active');
-  }
-}
-
-function closeMidnightSurprise(){
-  const modal = document.getElementById('midnightModal');
-  modal.classList.remove('active');
-
-  const cakeSection = document.getElementById('cakeSection');
-  if (cakeSection){
-    cakeSection.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  setTimeout(() => launchFirework(fxCanvas.width * 0.5, fxCanvas.height * 0.3, true), 350);
-}
 
 /* ── Staggered Title Letters ──────────────────────────────── */
 (function buildTitle(){
@@ -3559,22 +3934,15 @@ function closeMidnightSurprise(){
   });
 })();
 
-/* ── Pointer Sparkle Trail ────────────────────────────────── */
+/* ── Zero-DOM Pointer Sparkle Trail ────────────────────────── */
 let lastTrailTime = 0;
 function spawnTrail(x, y){
   const now = performance.now();
-  if (now - lastTrailTime < 80) return;
+  if (now - lastTrailTime < 40) return;
   lastTrailTime = now;
-  const d = document.createElement('div');
-  d.className = 'trail-spark';
-  d.textContent = ['✦', '✨', '✧', '💖'][Math.floor(Math.random() * 4)];
-  d.style.left = x + 'px';
-  d.style.top = y + 'px';
-  d.style.fontSize = (10 + Math.random() * 7) + 'px';
-  d.addEventListener('animationend', () => d.remove());
-  document.body.appendChild(d);
+  spawnStardust(x, y, 1);
 }
-window.addEventListener('pointermove', e => spawnTrail(e.clientX, e.clientY));
+window.addEventListener('pointermove', e => spawnTrail(e.clientX, e.clientY), { passive: true });
 
 /* ── Floating Hearts Stream ───────────────────────────────── */
 function releaseFloatingHeart(){
@@ -3619,16 +3987,21 @@ function openSurprise(){
   startMusic();
   musicBtn.classList.add('active');
 
-  setTimeout(() => launchFirework(window.innerWidth * 0.5, window.innerHeight * 0.3, true), 300);
-  setTimeout(() => launchFirework(window.innerWidth * 0.25, window.innerHeight * 0.35, true), 750);
-  setTimeout(() => launchFirework(window.innerWidth * 0.75, window.innerHeight * 0.35, true), 1200);
+  setTimeout(() => launchFirework(window.innerWidth * 0.5, window.innerHeight * 0.28, true), 180);
 
+  // Smooth, snappy reveal of celebration (60fps buttery transition)
   setTimeout(() => {
     intro.classList.add('fade');
+    celebration.classList.add('visible');
     celebration.classList.remove('hidden');
-    window.scrollTo(0, 0);
-  }, 1750);
-  setTimeout(() => intro.remove(), 3000);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    launchFirework(window.innerWidth * 0.28, window.innerHeight * 0.32, true);
+    setTimeout(() => launchFirework(window.innerWidth * 0.72, window.innerHeight * 0.32, true), 280);
+  }, 650);
+
+  setTimeout(() => {
+    if (intro && intro.parentNode) intro.remove();
+  }, 1600);
 }
 envelope.addEventListener('click', openSurprise);
 envelope.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openSurprise(); });
@@ -3700,33 +4073,38 @@ function relightCandles(){
 
 /* ── Interactive 3D Perspective Tilt on Memory Cards & Tickets ─ */
 function setupCard3DTilt(){
+  if (isMobile) return; // Keep mobile touch scrolling completely fluid
   const tiltElements = document.querySelectorAll('.flip-card, .holo-ticket');
   tiltElements.forEach(el => {
-    function handleMove(clientX, clientY){
-      const rect = el.getBoundingClientRect();
-      const x = clientX - rect.left;
-      const y = clientY - rect.top;
-      const midX = rect.width / 2;
-      const midY = rect.height / 2;
-      const rotY = ((x - midX) / midX) * 11;
-      const rotX = -((y - midY) / midY) * 11;
+    let rect = null;
+    let rafId = null;
 
-      if (!el.classList.contains('flipped')){
-        el.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
-      }
-      el.style.setProperty('--glare-x', `${x}px`);
-      el.style.setProperty('--glare-y', `${y}px`);
-    }
+    el.addEventListener('mouseenter', () => {
+      rect = el.getBoundingClientRect();
+    });
 
-    el.addEventListener('mousemove', e => handleMove(e.clientX, e.clientY));
-    el.addEventListener('touchmove', e => {
-      if (e.touches && e.touches[0]) handleMove(e.touches[0].clientX, e.touches[0].clientY);
-    }, { passive: true });
+    el.addEventListener('mousemove', e => {
+      if (!rect) rect = el.getBoundingClientRect();
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const midX = rect.width / 2;
+        const midY = rect.height / 2;
+        const rotY = ((x - midX) / midX) * 10;
+        const rotX = -((y - midY) / midY) * 10;
+
+        if (!el.classList.contains('flipped')){
+          el.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(1)}deg) rotateY(${rotY.toFixed(1)}deg) scale3d(1.02, 1.02, 1.02)`;
+        }
+        el.style.setProperty('--glare-x', `${x}px`);
+        el.style.setProperty('--glare-y', `${y}px`);
+      });
+    });
 
     el.addEventListener('mouseleave', () => {
-      if (!el.classList.contains('flipped')) el.style.transform = '';
-    });
-    el.addEventListener('touchend', () => {
+      rect = null;
+      if (rafId) cancelAnimationFrame(rafId);
       if (!el.classList.contains('flipped')) el.style.transform = '';
     });
   });
